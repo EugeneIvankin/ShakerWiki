@@ -15,7 +15,7 @@ function Cocteil () {
     }
 
     this.getName = function coc (callback) {
-        let name;
+        var name;
         db.query('SELECT username FROM model.user where idUser = 1', function (err, rows) {
             if (!err) {
                 name = rows[0].username;
