@@ -16,14 +16,15 @@ function Cocteil () {
 
     this.getName = function coc (callback) {
         let name;
-        db.query('SELECT name from name_of_cockteils where idname_of_cockteils = 1', function (err, rows) {
+        db.query('SELECT username FROM model.user where idUser = 1', function (err, rows) {
             if (!err) {
-                name = rows[0].name;
+                name = rows[0].username;
                 callback(name);
             }
             else
                 console.log('bad');
         })
+
     }
 
     this.setComposition = function (composition) {
