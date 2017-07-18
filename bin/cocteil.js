@@ -22,7 +22,8 @@ function Cocteil () {
                 callback(name);
             }
             else
-                console.log('bad');
+                name = "bad"
+                callback(name);
         })
 
     }
