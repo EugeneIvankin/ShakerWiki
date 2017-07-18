@@ -1,10 +1,9 @@
 var mysql = require('mysql');
 
 var client = mysql.createConnection({
-    host: 'localhost',
-    port: '3306',
+    host: 'node44460-shekerwiki.mycloud.by ',
     user: 'root',
-    password: 'root',
+    password: 'MXVcla41136',
     database: 'model'
 })
 
