@@ -22,7 +22,7 @@ function Cocteil () {
                 callback(name);
             }
             else
-                name = "bad"
+                name = err;
                 callback(name);
         })
 
