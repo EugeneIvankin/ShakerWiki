@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/1', function (req, res) {
 function show(callback) {
-    let names, historyOf;
+    var names, historyOf;
         cocteil.getName(function (name) {
             names = name;
         });
