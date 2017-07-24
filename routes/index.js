@@ -10,9 +10,42 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/1', function (req, res) {
-    cocteil.getName(function (name) {
-        res.send(name);
-    })
+function show(callback) {
+    let names, historyOf;
+        cocteil.getName(function (name) {
+            names = name;
+        });
+        cocteil.getComposition(function (history) {
+            historyOf=history;
+            callback(names, historyOf);
+        });
+
+};
+
+show(function (name, history) {
+    console.log(name);
+    console.log(history);
+    res.render('index', { nameOfCocteil: name, historyOfCocteil: history });
+});
+
+
+
+
+
+
+
+
+   /*let nameOfCocteil, historyOfCocteil;
+    nameOfCocteil = "Name";
+    historyOfCocteil = "history";*/
+
+
+
+   /** cocteil.getComposition(function (composition) {
+        res.render('index', { historyOfCocteil: composition });
+    })*/
+
+  // res.render('index', { historyOfCocteil: historyOfCocteil });
 });
 
 module.exports = router;

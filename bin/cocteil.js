@@ -14,26 +14,46 @@ function Cocteil () {
         this.name = name;
     }
 
-    this.getName = function coc (callback) {
+    this.getName = function (callback) {
         var name;
-        db.query('SELECT username FROM User where idUser = 1', function (err, rows) {
+       /* db.query('SELECT username FROM User where idUser = 1', function (err, rows) {
             if (!err) {
                 name = rows[0].username;
                 callback(name);
             }
             else
                 name = err;
-                callback(name);
-        })
+            callback(name);
+        })*/
 
+        db.query('SELECT name_of_cocteil FROM info_of_cocteils where idCocteil = 1', function (err, rows) {
+            if (!err) {
+                name = rows[0].name_of_cocteil;
+            }
+            else{
+                name = err;
+            }
+            callback(name);
+        })
     }
 
     this.setComposition = function (composition) {
         this.composition = composition;
     }
 
-    this.getComposition = function () {
-        console.log(cocteil.composition);
+    this.getComposition = function com (callback) {
+        var composition;
+
+        db.query('SELECT history_of_cocteil FROM info_of_cocteils where idCocteil = 1', function (err, rows) {
+            if (!err) {
+                composition = rows[0].history_of_cocteil;
+            }
+            else{
+                composition = err;
+            }
+            callback(composition);
+        })
+
     }
 
     this.setCookingMethod = function (cookingMethod) {
