@@ -16,16 +16,6 @@ function Cocteil () {
 
     this.getName = function (callback) {
         var name;
-       /* db.query('SELECT username FROM User where idUser = 1', function (err, rows) {
-            if (!err) {
-                name = rows[0].username;
-                callback(name);
-            }
-            else
-                name = err;
-            callback(name);
-        })*/
-
         db.query('SELECT name_of_cocteil FROM info_of_cocteils where idCocteil = 1', function (err, rows) {
             if (!err) {
                 name = rows[0].name_of_cocteil;
@@ -37,21 +27,20 @@ function Cocteil () {
         })
     }
 
-    this.setComposition = function (composition) {
+    this.setHistory = function (composition) {
         this.composition = composition;
     }
 
-    this.getComposition = function com (callback) {
-        var composition;
-
+    this.getHistory = function com (callback) {
+        var History;
         db.query('SELECT history_of_cocteil FROM info_of_cocteils where idCocteil = 1', function (err, rows) {
             if (!err) {
-                composition = rows[0].history_of_cocteil;
+                history = rows[0].history_of_cocteil;
             }
             else{
-                composition = err;
+                history = err;
             }
-            callback(composition);
+            callback(history);
         })
 
     }
@@ -78,6 +67,36 @@ function Cocteil () {
 
     this.getComment = function () {
         console.log(cocteil.comment);
+    }
+
+    this.all = function (callback) {
+        var names, historyOf;
+        cocteil.getName(function (name) {
+            names = name;
+        });
+        cocteil.getComposition(function (history) {
+            historyOf=history;
+            callback(names, historyOf);
+        });
+    }
+
+    this.allInfo = function (callback) {
+        var name, history, likes, preparation;
+        db.query('SELECT name_of_cocteil, history_of_cocteil, like_of_cocteil, cockteils_preparation FROM info_of_cocteils where idCocteil = 1', function (err, rows) {
+            if (!err) {
+                name = rows[0].name_of_cocteil;
+                history = rows[0].history_of_cocteil;
+                likes = rows[0].like_of_cocteil;
+                preparation = rows[0].cockteils_preparation;
+            }
+            else{
+                name = err;
+                history = err;
+                likes = err;
+                preparation = err;
+            }
+            callback(name,history,likes,preparation);
+        })
     }
 
 }
