@@ -4,8 +4,9 @@ var cocteil = require('../bin/cocteil');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    cocteil.allInfo(function (name, history,like,preparation) {
-        res.render('index', { nameOfCocteil: name, historyOfCocteil: history, likeOfCocteil: like,cocteilPreparation:preparation });
+    cocteil.allInfo(function (name, history, like, preparation, ingredients, volumOfIngredients) {
+        res.render('index', { nameOfCocteil: name, historyOfCocteil: history, likeOfCocteil: like,
+            cocteilPreparation:preparation, ingredients: ingredients, volumOfIngredients: volumOfIngredients });
     });
 });
 
