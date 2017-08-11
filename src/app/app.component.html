@@ -1,0 +1,29 @@
+<div>
+<label (click)="homePage();">
+  <h1>ShakerWiki</h1>
+</label>
+  <hr>
+
+  <div>
+  <button routerLink="/dashboard" routerLinkActive="active">Просмотр всех</button>
+
+    <label >Название коктейля:</label> <input type="text" #cocteilName/>
+   <button (click)="searchCocteil(cocteilName.value);">
+      Найти
+   </button>
+
+    <button (click)="popCocteil();">
+      Самый популярный
+    </button>
+
+    <label>Регистрация/вход</label> <input type="text">
+
+  </div>
+
+
+  <hr>
+
+</div>
+
+<router-outlet></router-outlet>
+

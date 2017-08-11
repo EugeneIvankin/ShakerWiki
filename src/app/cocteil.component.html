@@ -1,0 +1,25 @@
+<h1>{{cocteil?.name_of_cocteil}}</h1>
+
+<div>
+  {{cocteil?.history_of_cocteil}}
+</div>
+
+<hr>
+
+<div>
+  <label>Рейтинг {{cocteil?.like_of_cocteil}}</label>
+  <button (click)="addLike();">
+    Повысить
+  </button>
+</div>
+
+<hr>
+
+<div *ngFor="let cocteil of cocteilIngred">
+  {{cocteil?.ingredient}}
+  {{cocteil?.volum}}
+</div>
+
+<div>
+  {{cocteil?.cockteils_preparation}}
+</div>
