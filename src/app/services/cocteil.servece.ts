@@ -64,6 +64,18 @@ export class CocteilService {
       .catch((error:any) =>{return Observable.throw(error);})
   }
 
+  addCocteil(name, history, preparation){
+    var headers = new Headers();
+    return this.http.put('/cocteilDetail/addCocteil', {name: name, history: history, preparation: preparation}, {headers: headers})
+      .map(res=>res.json())
+      .catch((error:any) =>{return Observable.throw(error);})
+  }
 
+  addCocteilIngredients(ingredients){
+    var headers = new Headers();
+    return this.http.post('/cocteilDetail/addCocteilIngredients', {ingredients: ingredients}, {headers: headers})
+      .map(res=>res.json())
+      .catch((error:any) =>{return Observable.throw(error);})
+  }
 }
 
