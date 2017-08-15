@@ -71,9 +71,9 @@ export class CocteilService {
       .catch((error:any) =>{return Observable.throw(error);})
   }
 
-  addCocteilIngredients(ingredients){
+  addCocteilIngredients(name, ingredients){
     var headers = new Headers();
-    return this.http.post('/cocteilDetail/addCocteilIngredients', {ingredients: ingredients}, {headers: headers})
+    return this.http.put('/cocteilDetail/addCocteilIngredients', {name: name, ingredients: ingredients}, {headers: headers})
       .map(res=>res.json())
       .catch((error:any) =>{return Observable.throw(error);})
   }

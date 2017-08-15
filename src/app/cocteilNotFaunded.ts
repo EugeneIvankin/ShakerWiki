@@ -22,4 +22,5 @@ export class CocteilNotFaunded {
     let link = [''];
     this.router.navigate(link);
   }
+
 }

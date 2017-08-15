@@ -7,12 +7,23 @@
   <div>
   <button routerLink="/dashboard" routerLinkActive="active">Просмотр всех</button>
 
-    <label >Название коктейля:</label> <input type="text" #cocteilName/>
-   <button (click)="searchCocteil(cocteilName.value);">
-      Найти
-   </button>
 
-    <button (click)="popCocteil();">
+      <div >
+            <label >Название коктейля:</label>
+            <input type="text" class="form-control" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel" required pattern="[а-яА-Я-0-9]{3,9}" />
+            <div [hidden]="cocteilName.valid || cocteilName.untouched" class="alert alert-danger">
+              Не указано имя
+            </div>
+
+
+
+         <button [disabled]="cocteilName.invalid" (click)="searchCocteil(cocteilName.value);">
+            Найти
+         </button>
+      </div>
+
+
+    <button  (click)="popCocteil();">
       Самый популярный
     </button>
 

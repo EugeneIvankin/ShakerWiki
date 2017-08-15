@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import {CocteilService} from "./services/cocteil.servece";
 import {Cocteil} from "../cocteil";
 import {CocteilIngred} from "../cocteilIngred";
+import {Router} from "@angular/router";
 
 export class Ingredient{
   name: string;
@@ -32,14 +33,15 @@ export class AddCocteil{
 
   constructor(
     private http: Http,
-    private cocteilService: CocteilService,)
+    private cocteilService: CocteilService,
+    private router: Router)
   {}
 
   addCocteil(name: string, history: string, preparation: string):void {
     this.cocteilService.addCocteil(name, history, preparation)
       .subscribe((res) => {this.addCocteilSucksesful()}, (err) => {console.log(err);})
-    this.cocteilService.addCocteilIngredients(this.cocteilIngredient)
-      .subscribe((res) => {this.addCocteilSucksesful()}, (err) => {console.log(err);})
+    this.cocteilService.addCocteilIngredients(name, this.cocteilIngredient)
+      .subscribe((res) => {this.addCocteilSucksesful()}, (err) => {console.log(err);})  /////////////!!!!!!!!!!!!!!!!!!!!!!
 
   }
 
@@ -49,8 +51,9 @@ export class AddCocteil{
   }
 
 
-addCocteilSucksesful(){
-  this.comit ="Коктейль успешно добавлен";
+addCocteilSucksesful(): void{
+  let link = ['addedCocteil'];
+  this.router.navigate(link);
 }
 
 }

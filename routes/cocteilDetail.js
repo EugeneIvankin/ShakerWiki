@@ -31,10 +31,7 @@ router.post('/',jsonParser, function(req, res, next) {
 
 router.post('/ingredients', jsonParser, function(req, res, next) {
   var name = req.body.name;
-  db.query('SELECT ingredient, volum  ' +
-    ' from cocteil_ingredients, ingredients  ' +
-    'where cocteil_ingredients.idIngredients=ingredients.idIngredients ' +
-    'and cocteil_ingredients.name_of_cocteil= ? ', [name], function (err, rows) {
+  db.query('SELECT name_of_ingredient, volum FROM cocteil_ingredients where name_of_cocteil= ? ', [name], function (err, rows) {
     if (err){
       res.json("Коктейл не найден");
     }
@@ -83,36 +80,40 @@ router.put('/addCocteil', jsonParser, function (req, res, next) {
   });
 });
 
-router.post('/addCocteilIngredients', jsonParser, function (req, res, next) {
+router.put('/addCocteilIngredients', jsonParser, function (req, res, next) {
 
-  for (var i=0; i<req.body.ingredients.length; i++){
-    var ingredient = req.body.ingredients[i].name;
-    console.log(ingredient);
-    /*db.query('SELECT ingredient FROM ingredients WHERE ingredient = ?', [ingredient], function (err, rows) {
-      if (err) {
-        res.send(err);
-      }
-      if (rows[0]===undefined){
-        console.log("not have");*/
-        db.query('insert into ingredients (ingredient) values ( ? )', [ingredient], function (err, rows) {
-          if (err) {
-            console.log(ingredient + "not add");
-          }
-          console.log(ingredient + "add");
-        });
-     /* }
-      else (console.log("have" + rows[0].ingredient));
-    });*/
-  }
-
-
-
-  /*db.query('insert into info_of_cocteils (name_of_cocteil, history_of_cocteil, like_of_cocteil, cockteils_preparation) values ( ?, ?, 0, ?)', [name, history, preparation], function (err, rows) {
+  add(function (err,rows) {
+    console.log(rows);
     if (err) {
       res.send(err);
     }
     res.json(rows);
-  });*/
+  });
+
+
+  function add(callback) {
+    var nameCocteil;
+    var ingredient;
+    var volum;
+    var rowsA;
+    var errA;
+
+    for (var i=0; i<req.body.ingredients.length; i++){
+
+      nameCocteil = req.body.name;
+      ingredient = req.body.ingredients[i].name;
+      volum = req.body.ingredients[i].volum;
+      db.query('insert into cocteil_ingredients (name_of_cocteil, name_of_ingredient, volum) values (? , ? , ?)', [nameCocteil, ingredient, volum], function (err, rows) {
+        if (err) {
+          errA = err;
+        }
+        rowsA = rows;
+      });
+    }
+    console.log(errA, rowsA);
+    callback(errA, rowsA);
+  }
+
 });
 
 

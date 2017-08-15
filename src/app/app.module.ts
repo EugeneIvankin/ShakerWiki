@@ -12,11 +12,12 @@ import {PopCocteilService} from "./popCocteil.component";
 import {CocteilNotFaunded} from "./cocteilNotFaunded";
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {AddCocteil} from "./addCocteil";
+import {AddedCocteil} from "./addedCocteil";
 
 
 @NgModule({
   declarations: [
-    AppComponent, CocteilDetailComponent, CocteilDashboard, PopCocteilService, CocteilNotFaunded, AddCocteil
+    AppComponent, CocteilDetailComponent, CocteilDashboard, PopCocteilService, CocteilNotFaunded, AddCocteil, AddedCocteil
   ],
   imports: [
     BrowserModule, HttpModule, FormsModule, AppRoutingModule

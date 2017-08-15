@@ -6,6 +6,7 @@ import { CocteilDashboard }      from './cocteil-dashboard.component';
 import {PopCocteilService} from "./popCocteil.component";
 import {CocteilNotFaunded} from "./cocteilNotFaunded";
 import {AddCocteil} from "./addCocteil";
+import {AddedCocteil} from "./addedCocteil";
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'detail/:name',  component: CocteilDetailComponent },
   { path: 'cocteilNotFaunded', component: CocteilNotFaunded },
   { path: 'addCocteil', component: AddCocteil },
+  { path: 'addedCocteil', component: AddedCocteil }
 
 ];
 

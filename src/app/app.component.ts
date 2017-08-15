@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {Cocteil} from "../cocteil";
 import {CocteilIngred} from "../cocteilIngred";
 import {Router} from "@angular/router";
-
+import { NgForm} from '@angular/forms';
 
 
 @Component({
@@ -13,7 +13,7 @@ import {Router} from "@angular/router";
 
 export class AppComponent  {
 
-  cocteil: Cocteil;
+  cocteil: Cocteil = new Cocteil();
   cocteilIngred: CocteilIngred;
 
   constructor(
