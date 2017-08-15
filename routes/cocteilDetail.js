@@ -88,21 +88,21 @@ router.post('/addCocteilIngredients', jsonParser, function (req, res, next) {
   for (var i=0; i<req.body.ingredients.length; i++){
     var ingredient = req.body.ingredients[i].name;
     console.log(ingredient);
-    db.query('SELECT ingredient FROM ingredients WHERE ingredient = ?', [ingredient], function (err, rows) {
+    /*db.query('SELECT ingredient FROM ingredients WHERE ingredient = ?', [ingredient], function (err, rows) {
       if (err) {
         res.send(err);
       }
       if (rows[0]===undefined){
-        console.log("not have");
+        console.log("not have");*/
         db.query('insert into ingredients (ingredient) values ( ? )', [ingredient], function (err, rows) {
           if (err) {
-            res.send(err);
+            console.log(ingredient + "not add");
           }
-          console.log(ingredient + " add");
+          console.log(ingredient + "add");
         });
-      }
+     /* }
       else (console.log("have" + rows[0].ingredient));
-    });
+    });*/
   }
 
 
