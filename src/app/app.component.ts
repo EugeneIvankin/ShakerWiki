@@ -2,12 +2,13 @@ import {Component} from '@angular/core';
 import {Cocteil} from "../cocteil";
 import {CocteilIngred} from "../cocteilIngred";
 import {Router} from "@angular/router";
-import { NgForm} from '@angular/forms';
+
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 
 

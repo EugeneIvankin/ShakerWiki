@@ -1,1 +1,104 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  background: url("1.jpg") no-repeat;
+  background-size: cover;
+}
+
+#logoConteiner{
+  width: auto;
+  height: 20%;
+  margin-top: 0%;
+}
+
+#logo{
+  font-size: 300%;
+  color: whitesmoke;
+  font-family: Algerian;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+
+.nameCocteil{
+  font-size: 250%;
+  color: whitesmoke;
+  font-family: Algerian;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+
+.textForCocteil{
+  color: #000000;
+  text-align: justify;
+  font-size: 120%;
+}
+
+.textForLike{
+  color: #000;
+  font-size: 120%;
+  padding-top: 30%;
+  z-index: 100;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#heart {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-top: 0%;
+  margin-left: 80%;
+}
+#heart:before,
+#heart:after {
+  position: absolute;
+  content: "";
+  left: 29px;
+  top: 15%;
+  width: 30px;
+  height: 45px;
+  background: whitesmoke;
+  z-index: -100;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+#heart:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin :100% 100%;
+}
+#heart:active{
+  height: 47px;
+}
+#heart:active .textForLike{
+  padding-top: 26%;
+}
+
+#textAtHeart {
+  width: 60px;
+  height: 60px;
+  cursor: default;
+  user-select: none;
+}

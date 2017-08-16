@@ -2,17 +2,17 @@ import {Component, OnInit} from '@angular/core';
 import {Http, Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Observable} from "rxjs";
-import {CocteilService} from "./services/cocteil.servece";
-import {Cocteil} from "../cocteil";
-import {CocteilIngred} from "../cocteilIngred";
+import {CocteilService} from "../services/cocteil.servece";
+import {Cocteil} from "../../cocteil";
+import {CocteilIngred} from "../../cocteilIngred";
 
 
 
 
 @Component({
   selector: 'popCocteil',
-  templateUrl: './popCocteil.html',
-  styleUrls: ['./popCocteil.css']
+  templateUrl: 'popCocteil.html',
+  styleUrls: ['popCocteil.css']
 })
 
 export class PopCocteilService implements OnInit{

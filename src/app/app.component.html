@@ -1,5 +1,5 @@
 <div>
-<label (click)="homePage();">
+<!--<label id="logo" (click)="homePage();">
   <h1>ShakerWiki</h1>
 </label>
   <hr>
@@ -12,7 +12,7 @@
             <label >Название коктейля:</label>
             <input type="text" class="form-control" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel" required pattern="[а-яА-Я-0-9]{3,9}" />
             <div [hidden]="cocteilName.valid || cocteilName.untouched" class="alert alert-danger">
-              Не указано имя
+              Название должно содержать минимум 3 символа
             </div>
 
 
@@ -36,7 +36,8 @@
 
   <hr>
 
-</div>
 
+-->
 <router-outlet></router-outlet>
 
+</div>
