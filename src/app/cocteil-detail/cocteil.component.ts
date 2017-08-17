@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CocteilService} from './services/cocteil.servece';
-import { Cocteil } from '../cocteil'
-import {CocteilIngred} from "../cocteilIngred";
+import {CocteilService} from '../services/cocteil.servece';
+import { Cocteil } from '../../cocteil'
+import {CocteilIngred} from "../../cocteilIngred";
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 
 
@@ -9,8 +9,8 @@ import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 @Component({
   moduleId: module.id,
   selector: 'cocteil-detail',
-  templateUrl: './cocteil.component.html',
-  styleUrls: ['./cocteil.component.css']
+  templateUrl: 'cocteil.component.html',
+  styleUrls: ['cocteil.component.css']
 })
 export class CocteilDetailComponent implements OnInit{
 

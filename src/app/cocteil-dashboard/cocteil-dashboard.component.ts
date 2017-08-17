@@ -1,14 +1,14 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { AllCocteils } from '../allCocteils';
-import {CocteilService} from "./services/cocteil.servece";
+import { AllCocteils } from '../../allCocteils';
+import {CocteilService} from "../services/cocteil.servece";
 
 
 
 @Component({
   moduleId: module.id,
   selector: 'cocteil-dashboard',
-  templateUrl: './cocteil-dashboard.component.html',
-  styleUrls: ['./cocteil-dashboard.component.css']
+  templateUrl: 'cocteil-dashboard.component.html',
+  styleUrls: ['cocteil-dashboard.component.css']
 })
 
 

@@ -4,21 +4,7 @@ body{
   background-size: cover;
 }
 
-#logoConteiner{
-  width: auto;
-  height: 20%;
-  margin-top: 0%;
-}
 
-#logo{
-  font-size: 300%;
-  color: whitesmoke;
-  font-family: Algerian;
-  text-align: center;
-  vertical-align: middle;
-  margin-bottom: 0%;
-  margin-top: 0%;
-}
 
 .nameCocteil{
   font-size: 250%;
@@ -36,69 +22,97 @@ body{
   font-size: 120%;
 }
 
+.textForIngredient{
+  color: #000000;
+  text-align: center;
+  font-size: 120%;
+}
+
+.textForBatton{
+  color: #000000;
+  text-align: center;
+  font-size: 120%;
+  padding-top: 0%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
 .textForLike{
   color: #000;
   font-size: 120%;
-  padding-top: 30%;
+  padding-top: 20%;
   z-index: 100;
   margin-top: 0;
   margin-bottom: 0;
   text-align: center;
 }
 
-#heart {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  margin-top: 0%;
-  margin-left: 80%;
-}
-#heart:before,
-#heart:after {
-  position: absolute;
-  content: "";
-  left: 29px;
-  top: 15%;
-  width: 30px;
-  height: 45px;
-  background: whitesmoke;
-  z-index: -100;
-  -moz-border-radius: 50px 50px 0 0;
-  border-radius: 50px 50px 0 0;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-transform-origin: 0 100%;
-  -moz-transform-origin: 0 100%;
-  -ms-transform-origin: 0 100%;
-  -o-transform-origin: 0 100%;
-  transform-origin: 0 100%;
-}
-#heart:after {
-  left: 0;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -webkit-transform-origin: 100% 100%;
-  -moz-transform-origin: 100% 100%;
-  -ms-transform-origin: 100% 100%;
-  -o-transform-origin: 100% 100%;
-  transform-origin :100% 100%;
-}
-#heart:active{
-  height: 47px;
-}
-#heart:active .textForLike{
-  padding-top: 26%;
+#like{
+  float: right;
+  margin-right: 3%;
+  margin-top: 3%;
 }
 
-#textAtHeart {
-  width: 60px;
-  height: 60px;
+#triangle {
+  width: 40px;
+  height: 40px;
+  background: whitesmoke;
+  display: block;
+  border-radius: 7% 7% 50% 50%/60% 60% 40% 40%;
+}
+#rectanglVerticale {
+  width: 4px;
+  height: 8px;
+  margin-left: 18px;
+  background-color: whitesmoke;
+}
+#rectanglHorizontal {
+  width: 30px;
+  height: 5px;
+  background-color: whitesmoke;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+#textAtLike {
+  width: 40px;
+  height: 27px;
   cursor: default;
   user-select: none;
+}
+
+#triangle:hover{
+  background: chocolate;
+}
+
+#triangle:hover .textForLike{
+  font-family: Algerian;
+  color: whitesmoke;
+}
+
+.CocteilBatton {
+  width: auto;
+  height: 100%;
+  background-color: #f5f5f5;
+  opacity: .7;
+  border-radius: 16% 16% 16% 16%/60% 60% 60% 60%;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  float: left;
+  margin-left: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.CocteilBatton:focus{
+  outline: none;
+}
+
+#CocteilBatton:hover{
+  opacity: 1;
 }

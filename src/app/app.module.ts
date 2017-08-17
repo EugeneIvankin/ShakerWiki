@@ -4,9 +4,9 @@ import {HttpModule} from '@angular/http';
 import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import {CocteilDetailComponent} from './cocteil.component'
+import {CocteilDetailComponent} from './cocteil-detail/cocteil.component'
 import {CocteilService} from './services/cocteil.servece';
-import {CocteilDashboard} from './cocteil-dashboard.component';
+import {CocteilDashboard} from './cocteil-dashboard/cocteil-dashboard.component';
 import {AppRoutingModule} from "./routing/app-routing.module";
 import {PopCocteilService} from "./popCocteil/popCocteil.component";
 import {CocteilNotFaunded} from "./cocteilNotFaunded";

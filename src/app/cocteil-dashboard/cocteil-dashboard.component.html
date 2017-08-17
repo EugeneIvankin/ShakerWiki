@@ -1,0 +1,16 @@
+<div id="allCocteil">
+
+
+    <div *ngFor="let cocteils of allCocteils"  [routerLink]="['/detail', cocteils?.name_of_cocteil]">
+
+      <div id="smallView">
+        <div id="smallIcon"></div>
+        <div id="smallViewName">
+          <p>{{cocteils?.name_of_cocteil}}</p>
+        </div>
+      </div>
+
+    </div>
+
+
+</div>

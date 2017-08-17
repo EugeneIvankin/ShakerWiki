@@ -1,14 +1,24 @@
-<div>
-<!--<label id="logo" (click)="homePage();">
-  <h1>ShakerWiki</h1>
-</label>
+<div id="table">
+
+  <div id="logoConteiner">
+    <h1 id="logo" (click)="homePage();">ShakerWiki</h1>
+  </div>
+
   <hr>
 
-  <div>
-  <button routerLink="/dashboard" routerLinkActive="active">Просмотр всех</button>
+  <div id="battons">
 
+    <div class="CocteilBatton" routerLink="/dashboard" routerLinkActive="active">
+      <p class="textForBatton">Все коктейли</p>
+    </div>
 
-      <div >
+    <div class="CocteilBatton"  (click)="popCocteil();">
+      <p class="textForBatton">Самый популярный</p>
+    </div>
+
+  </div>
+
+  <!--   <div >
             <label >Название коктейля:</label>
             <input type="text" class="form-control" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel" required pattern="[а-яА-Я-0-9]{3,9}" />
             <div [hidden]="cocteilName.valid || cocteilName.untouched" class="alert alert-danger">
@@ -21,13 +31,11 @@
             Найти
          </button>
       </div>
+-->
 
 
-    <button  (click)="popCocteil();">
-      Самый популярный
-    </button>
 
-    <label>Регистрация/вход</label> <input type="text">
+<!--    <label>Регистрация/вход</label> <input type="text">
 
     <button routerLink="/addCocteil" routerLinkActive="active">Добавить коктейль</button>
 
@@ -36,8 +44,8 @@
 
   <hr>
 
-
 -->
+
 <router-outlet></router-outlet>
 
 </div>

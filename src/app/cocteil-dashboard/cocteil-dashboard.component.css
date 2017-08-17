@@ -1,0 +1,38 @@
+#smallView {
+  width: 130px;
+  height: 120px;
+  background-color: whitesmoke;
+  float: left;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  opacity: 0.3;
+}
+
+#smallView:hover {
+  opacity: 1;
+
+}
+
+#allCocteil{
+  width: 80%;
+  height: 700px;
+  margin-top: 1%;
+  margin-left: 10%;
+}
+
+#smallIcon{
+  height: 80%;
+  width: auto;
+}
+
+#smallViewName{
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 130%;
+}
