@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CocteilDetailComponent }   from '../cocteil-detail/cocteil.component';
 import { CocteilDashboard }      from '../cocteil-dashboard/cocteil-dashboard.component';
 import {PopCocteilService} from "../popCocteil/popCocteil.component";
-import {CocteilNotFaunded} from "../cocteilNotFaunded";
+import {CocteilNotFaunded} from "../cocteilNotFaunded/cocteilNotFaunded";
 import {AddCocteil} from "../addCocteil";
 import {AddedCocteil} from "../addedCocteil";
 

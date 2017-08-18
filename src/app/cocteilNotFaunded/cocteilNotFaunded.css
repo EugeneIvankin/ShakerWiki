@@ -1,0 +1,16 @@
+h1 {
+  color: whitesmoke;
+  margin: 0;
+}
+
+#cocteilNotFound{
+  width: auto;
+  height: 5%;
+  text-align: center;
+}
+
+#cocteilNotFoundBatton{
+  height: 3%;
+  width: 25%;
+  float: right;
+}

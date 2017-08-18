@@ -3,9 +3,9 @@
   width: 100%;
 }
 
-.logoConteiner{
+#logoConteiner{
   width: auto;
-  height: 20%;
+  height: 6%;
   margin-top: 0%;
 }
 
@@ -25,4 +25,67 @@
   width: auto;
   height: 3%;
   vertical-align: middle;
+}
+
+#searechCocteil {
+  height: 100%;
+  margin-right: 1%;
+  width: auto;
+  float: right;
+}
+
+#allCocteilBatton{
+  width: 15%;
+  height: 100%;
+  margin-left: 1%;
+  float: left;
+}
+
+#popCocteilBatton{
+  height: 100%;
+  width: 20%;
+  margin-left: 1%;
+  float: left;
+}
+
+input {
+  height: 100%;
+  border: 0;
+  padding: 0;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  opacity: 0.7;
+  text-align: center;
+  font-family: "Times New Roman";
+  font-size: 120%;
+
+}
+
+input:focus {
+  opacity: 1;
+  outline: none;
+}
+
+#inputHelp{
+  width: 50px;
+  height: 30px;
+  z-index: 100;
+  margin-top: 70px;
+  background: whitesmoke;
+  float: right;
+}
+
+#message {
+  height: 2.5%;
+  width: auto;
+}
+
+#messageText {
+  width: auto;
+  height: auto;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 120%;
+  margin: 0;
 }

@@ -8,30 +8,45 @@
 
   <div id="battons">
 
-    <div class="CocteilBatton" routerLink="/dashboard" routerLinkActive="active">
-      <p class="textForBatton">Все коктейли</p>
+    <div id="allCocteilBatton">
+      <button class="CocteilBatton" routerLink="/dashboard" routerLinkActive="active">
+        <div class="arealForTextBotton">
+          <p class="textForBatton">Все коктейли</p>
+        </div>
+      </button>
     </div>
 
-    <div class="CocteilBatton"  (click)="popCocteil();">
-      <p class="textForBatton">Самый популярный</p>
+    <div id="popCocteilBatton">
+      <button class="CocteilBatton"  (click)="popCocteil();">
+        <div class="arealForTextBotton">
+          <p class="textForBatton">Самый лучший</p>
+        </div>
+      </button>
     </div>
+
+    <div id="searechCocteil">
+
+      <input type="text" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel" required pattern="[а-яА-Я-0-9]{3,9}"
+      placeholder="Название коктейля"/>
+
+      <!--<div id="inputHelp" [hidden]="cocteilName.valid || cocteilName.untouched">
+        <p class="textForBatton">Название должно содержать минимум 3 символа</p>
+      </div>-->
+
+      <button class="CocteilBatton" [disabled]="cocteilName.invalid" (click)="searchCocteil(cocteilName.value);">
+        <p class="textForBatton">Найти</p>
+      </button>
+
+    </div>
+
+
 
   </div>
 
-  <!--   <div >
-            <label >Название коктейля:</label>
-            <input type="text" class="form-control" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel" required pattern="[а-яА-Я-0-9]{3,9}" />
-            <div [hidden]="cocteilName.valid || cocteilName.untouched" class="alert alert-danger">
-              Название должно содержать минимум 3 символа
-            </div>
-
-
-
-         <button [disabled]="cocteilName.invalid" (click)="searchCocteil(cocteilName.value);">
-            Найти
-         </button>
-      </div>
--->
+  <hr style="margin-bottom: 0">
+  <div id="message" >
+    <p id="messageText" [hidden]="cocteilName.valid || cocteilName.untouched">Название должно содержать минимум 3 символа, только русские буквы и цифры</p>
+  </div>
 
 
 

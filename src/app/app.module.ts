@@ -9,7 +9,7 @@ import {CocteilService} from './services/cocteil.servece';
 import {CocteilDashboard} from './cocteil-dashboard/cocteil-dashboard.component';
 import {AppRoutingModule} from "./routing/app-routing.module";
 import {PopCocteilService} from "./popCocteil/popCocteil.component";
-import {CocteilNotFaunded} from "./cocteilNotFaunded";
+import {CocteilNotFaunded} from "./cocteilNotFaunded/cocteilNotFaunded";
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {AddCocteil} from "./addCocteil";
 import {AddedCocteil} from "./addedCocteil";

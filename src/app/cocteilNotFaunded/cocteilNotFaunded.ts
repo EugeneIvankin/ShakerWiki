@@ -7,8 +7,8 @@ import {Router} from "@angular/router";
 
 @Component({
   selector: 'cocteilNotFaunded',
-  templateUrl: './cocteilNotFaunded.html',
-  styleUrls: ['./cocteilNotFaunded.css']
+  templateUrl: 'cocteilNotFaunded.html',
+  styleUrls: ['cocteilNotFaunded.css']
 })
 
 export class CocteilNotFaunded {
