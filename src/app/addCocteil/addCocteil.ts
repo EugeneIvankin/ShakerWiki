@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
-import {CocteilService} from "./services/cocteil.servece";
-import {Cocteil} from "../cocteil";
-import {CocteilIngred} from "../cocteilIngred";
+import {CocteilService} from "../services/cocteil.servece";
+import {Cocteil} from "../../cocteil";
+import {CocteilIngred} from "../../cocteilIngred";
 import {Router} from "@angular/router";
 
 export class Ingredient{
@@ -19,14 +19,15 @@ export class Ingredient{
 
 @Component({
   selector: 'addCocteil',
-  templateUrl: './addCocteil.html',
-  styleUrls: ['./addCocteil.css']
+  templateUrl: 'addCocteil.html',
+  styleUrls: ['addCocteil.css']
 })
 
 export class AddCocteil{
-  cocteil: Cocteil;
+  cocteil: Cocteil = new Cocteil();
   cocteilIngred: CocteilIngred;
   name: any;
+  preporation: string;
   comit: any;
   cocteilIngredient: Ingredient[]=[];
 

@@ -1,0 +1,148 @@
+#table{
+  width: auto;
+  height: 100vh;
+}
+
+.nameDiv{
+  width: auto;
+  height: 3%;
+  margin-top: 0%;
+  text-align: center;
+}
+
+#infoOfCocteil{
+  height: auto;
+  width: auto;
+  margin-top: 0%;
+}
+
+.infoHistoryDiv{
+  height: 70vh;
+  width: 30%;
+  margin-top: 0%;
+  margin-left: 68.5%;
+  margin-right: 1%;
+  background: whitesmoke;
+  opacity: 0.7;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.infoCocteil{
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  background: whitesmoke;
+  border-radius: 10px;
+  resize: none;
+  font-family: "Times New Roman";
+  font-size: 120%;
+  text-align: center;
+}
+
+.infoCocteil:focus{
+  outline: none;
+  background: white;
+}
+
+.infoHistoryDiv:hover {
+  opacity: 1;
+}
+
+#imageDiv{
+  height: auto;
+  width: 38%;
+  margin-top: 0%;
+  margin-left: 0%;
+  float: left;
+}
+
+#preporationDiv{
+  height: auto;
+  height: 70vh;
+  width: 29%;
+  margin-top: 0%;
+  float: left;
+  background: whitesmoke;
+  opacity: 0.7;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#divOfPreporation{
+  width: auto;
+  height: 30%;
+}
+
+#preporationDiv:hover{
+  opacity: 1;
+}
+
+.ingredientInput{
+  height: 100%;
+  border: 0;
+  padding: 0;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  opacity: 0.7;
+  text-align: center;
+  font-family: "Times New Roman";
+  font-size: 120%;
+}
+
+.ingredientInput:focus {
+  opacity: 1;
+  outline: none;
+}
+
+#inputFields{
+  width: auto;
+  height: 10%;
+}
+
+.inputFieldIngredient{
+  width: 70%;
+  height: 50%;
+  float: left;
+}
+
+#addIngridient{
+  width: 7%;
+  height: 100%;
+  margin-left: 85%;
+  margin-top: 3%;
+}
+
+.CocteilBatton:hover{
+  background-color: white;
+}
+
+#addedIngridient{
+  width: 100%;
+  height: 40%;
+}
+
+#tableAddedIngridients{
+  width: 100%;
+  height: 100%;
+}
+
+#ingredientTr{
+  width: 100%;
+}
+
+#leftTd{
+  width: 1%;
+}
+
+#regthTd{
+  width: 1%
+}
+
+#addCocteilBatton{
+  width: 100%;
+  height: 5%;
+  text-align: center;
+}
+

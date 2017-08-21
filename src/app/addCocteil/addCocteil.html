@@ -1,0 +1,79 @@
+<div id="message" >
+  <p id="messageText" [hidden]="cocteilName.valid || cocteilName.untouched">Название должно содержать минимум 3 символа, только русские буквы и цифры</p>
+ <!-- <p [hidden]="cocteilPreparation.valid || cocteilPreparation.untouched">Неуказан способ приготовления коктейля</p> -->
+</div>
+
+<div id="table">
+
+  <div class="nameDiv">
+    <input type="text" placeholder="Название коктейля" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel"
+           required pattern="[а-яА-Я-0-9]{3,9}" />
+  </div>
+
+  <div id="infoOfCocteil">
+
+    <div id="preporationDiv">
+
+      <div id="divOfPreporation">
+
+      <textarea class="infoCocteil" type="text" placeholder="Способ приготовления коктейля..."
+                [ngModel]="cocteil.cockteils_preparation" #cocteilPreparation="ngModel"
+                required pattern="[а-яА-Я-0-9]{3,9}"></textarea>
+      </div>
+
+      <div id="inputFields">
+        <div class="inputFieldIngredient">
+          <input class="infoCocteil" type="text" placeholder="Название ингридиента" #ingredient/>
+          <input class="infoCocteil" type="text" placeholder="Количество ингридиента" #volum/>
+        </div>
+        <div id="addIngridient">
+          <button class="CocteilBatton" (click)="addCocteilIngredient(ingredient.value, volum.value);">
+            +
+          </button>
+        </div>
+      </div>
+
+      <p class="textForCocteil">Состав коктейля: </p>
+
+      <div id="addedIngridient">
+        <tbody id="tableAddedIngridients">
+          <tr id="ingredientTr" *ngFor="let ingred of cocteilIngredient">
+            <td id="leftTd">{{ingred.name}}</td> <td id="regthTd">{{ingred.volum}}</td>
+          </tr>
+        </tbody>
+      </div>
+
+      <hr>
+
+      <div id="addCocteilBatton">
+        <button class="CocteilBatton" [disabled]="cocteilName.invalid || cocteilPreparation.invalid"
+                (click)="addCocteil(cocteilName.value, cocteilHistory.value, cocteilPreparation.value);">
+          <p class="textForBatton">Добавить коктейль</p>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="imageDiv">
+
+
+
+
+    </div>
+
+    <div class="infoHistoryDiv">
+
+      <textarea class="infoCocteil" type="text" placeholder="История коктейля..."
+                #cocteilHistory
+                required pattern="[а-яА-Я-0-9]{3,9}"></textarea>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+

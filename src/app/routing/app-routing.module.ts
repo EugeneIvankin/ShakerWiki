@@ -5,7 +5,7 @@ import { CocteilDetailComponent }   from '../cocteil-detail/cocteil.component';
 import { CocteilDashboard }      from '../cocteil-dashboard/cocteil-dashboard.component';
 import {PopCocteilService} from "../popCocteil/popCocteil.component";
 import {CocteilNotFaunded} from "../cocteilNotFaunded/cocteilNotFaunded";
-import {AddCocteil} from "../addCocteil";
+import {AddCocteil} from "../addCocteil/addCocteil";
 import {AddedCocteil} from "../addedCocteil";
 
 
