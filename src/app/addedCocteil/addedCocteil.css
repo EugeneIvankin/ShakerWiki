@@ -1,0 +1,21 @@
+h1 {
+  color: whitesmoke;
+  margin: 0;
+}
+
+a {
+  color: whitesmoke;
+  margin: 0;
+}
+
+#cocteilAdded{
+  width: auto;
+  height: 6%;
+  text-align: center;
+}
+
+#cocteilAddedBatton{
+  height: 3%;
+  width: 25%;
+  float: right;
+}

@@ -12,7 +12,7 @@ import {PopCocteilService} from "./popCocteil/popCocteil.component";
 import {CocteilNotFaunded} from "./cocteilNotFaunded/cocteilNotFaunded";
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {AddCocteil} from "./addCocteil/addCocteil";
-import {AddedCocteil} from "./addedCocteil";
+import {AddedCocteil} from "./addedCocteil/addedCocteil";
 
 
 @NgModule({

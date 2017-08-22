@@ -6,7 +6,7 @@ import { CocteilDashboard }      from '../cocteil-dashboard/cocteil-dashboard.co
 import {PopCocteilService} from "../popCocteil/popCocteil.component";
 import {CocteilNotFaunded} from "../cocteilNotFaunded/cocteilNotFaunded";
 import {AddCocteil} from "../addCocteil/addCocteil";
-import {AddedCocteil} from "../addedCocteil";
+import {AddedCocteil} from "../addedCocteil/addedCocteil";
 
 
 const routes: Routes = [

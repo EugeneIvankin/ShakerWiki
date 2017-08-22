@@ -25,7 +25,7 @@ export class Ingredient{
 
 export class AddCocteil{
   cocteil: Cocteil = new Cocteil();
-  cocteilIngred: CocteilIngred;
+  cocteilIngred: CocteilIngred = new CocteilIngred();
   name: any;
   preporation: string;
   comit: any;
