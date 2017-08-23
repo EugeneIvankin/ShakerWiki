@@ -13,18 +13,22 @@ import {CocteilNotFaunded} from "./cocteilNotFaunded/cocteilNotFaunded";
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {AddCocteil} from "./addCocteil/addCocteil";
 import {AddedCocteil} from "./addedCocteil/addedCocteil";
+import {RegistrationComponent} from "./registration/registration";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {User} from "../user";
 
 
 @NgModule({
   declarations: [
-    AppComponent, CocteilDetailComponent, CocteilDashboard, PopCocteilService, CocteilNotFaunded, AddCocteil, AddedCocteil
+    AppComponent, CocteilDetailComponent, CocteilDashboard, PopCocteilService, CocteilNotFaunded,
+    AddCocteil, AddedCocteil, RegistrationComponent
   ],
   imports: [
-    BrowserModule, HttpModule, FormsModule, AppRoutingModule
+    BrowserModule, HttpModule, FormsModule, AppRoutingModule, BrowserAnimationsModule
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
-    CocteilService],
+    CocteilService, User],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

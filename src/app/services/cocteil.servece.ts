@@ -77,5 +77,19 @@ export class CocteilService {
       .map(res=>res.json())
       .catch((error:any) =>{return Observable.throw(error);})
   }
+
+  searchUser(name, password){
+    var headers = new Headers();
+    return this.http.post('/cocteilDetail/searchUser', {name: name, password: password}, {headers: headers})
+      .map(res=>res.json())
+      .catch((error:any) =>{return Observable.throw(error);})
+  }
+
+  addUser(name, password){
+    var headers = new Headers();
+    return this.http.put('/cocteilDetail/addUser', {name: name, password: password}, {headers: headers})
+      .map(res=>res.json())
+      .catch((error:any) =>{return Observable.throw(error);})
+  }
 }
 

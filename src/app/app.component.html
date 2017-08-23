@@ -36,18 +36,16 @@
     </div>
 
     <div id="addCocteil">
-      <button class="CocteilBatton" routerLink="/addCocteil" routerLinkActive="active">
+      <button *ngIf="addCocteilBatton" class="CocteilBatton" routerLink="/addCocteil" routerLinkActive="active">
         <p class="textForBatton">Добавить коктейль</p>
       </button>
     </div>
 
     <div id="registation">
-      <button class="CocteilBatton">
+      <button *ngIf="registrationBatton" class="CocteilBatton" (click)="showDialog = !showDialog">
         <p class="textForBatton">Регистрация/Вход</p>
       </button>
     </div>
-
-
 
   </div>
 
@@ -56,19 +54,45 @@
     <p id="messageText" [hidden]="cocteilName.valid || cocteilName.untouched">Название должно содержать минимум 3 символа, только русские буквы и цифры</p>
   </div>
 
-
-
-<!--    <label>Регистрация/вход</label> <input type="text">
-
-    <button routerLink="/addCocteil" routerLinkActive="active">Добавить коктейль</button>
-
-  </div>
-
-
-  <hr>
-
--->
-
 <router-outlet></router-outlet>
 
 </div>
+
+<registration [(visible)]="showDialog">
+  <h1>Добро пожаловать!</h1>
+  <hr>
+  <div id="inputDiv">
+
+    <div id="userNameDiv">
+      <textarea class="userRegistrationInput" type="text" placeholder="Имя"
+                [ngModel]="user.name" #name="ngModel"
+                required pattern="[а-яА-Яa-zA-Z0-9]{3,10}"></textarea>
+    </div>
+
+    <div id="userPasswordDiv">
+      <textarea class="userRegistrationInput" type="text" placeholder="Пароль"
+                [ngModel]="user.password" #password="ngModel"
+                required pattern="[а-яА-Яa-zA-Z0-9!-+]{3,10}"></textarea>
+    </div>
+
+    <div id="loginDiv">
+      <button class="userLoginBatton" [disabled]="name.invalid || password.invalid" (click)="searchUser(name.value, password.value);">
+        <p class="textForBatton">Войти</p>
+      </button>
+    </div>
+
+    <div id="registrationDiv">
+      <button class="userRegistrationBatton" [disabled]="name.invalid || password.invalid" (click)="addUser(name.value, password.value);">
+        <p class="textForBatton">Регистрация</p>
+      </button>
+    </div>
+
+    <div id="messageFromShowDialogDiv">
+      <p class="textForBatton">{{messageFromShowDialog}}</p>
+    </div>
+
+  </div>
+
+</registration>
+
+

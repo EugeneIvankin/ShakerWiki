@@ -90,7 +90,6 @@ router.put('/addCocteilIngredients', jsonParser, function (req, res, next) {
     res.json(rows);
   });
 
-
   function add(callback) {
     var nameCocteil;
     var ingredient;
@@ -113,10 +112,29 @@ router.put('/addCocteilIngredients', jsonParser, function (req, res, next) {
     console.log(errA, rowsA);
     callback(errA, rowsA);
   }
-
 });
 
+router.post('/searchUser', jsonParser, function (req,res,next) {
+  var name = req.body.name;
+  var password = req.body.password;
+  db.query('SELECT idUser FROM user where userName=? and userPassword=?', [name, password], function (err, rows) {
+    if (err) {
+      res.send(err);
+    }
+    res.json(rows);
+  });
+});
 
+router.put('/addUser', jsonParser, function (req, res, next) {
+  var name = req.body.name;
+  var password = req.body.password;
+  db.query('insert into user (userName, userPassword) values (?, ?);', [name, password], function (err, rows) {
+    if (err) {
+      res.send(err);
+    }
+    res.json(rows);
+  });
+});
 
 
 

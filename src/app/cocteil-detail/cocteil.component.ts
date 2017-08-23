@@ -3,6 +3,7 @@ import {CocteilService} from '../services/cocteil.servece';
 import { Cocteil } from '../../cocteil'
 import {CocteilIngred} from "../../cocteilIngred";
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
+import {User} from "../../user";
 
 
 
@@ -20,7 +21,8 @@ export class CocteilDetailComponent implements OnInit{
   constructor(
     private cocteilService: CocteilService,
     private route: ActivatedRoute,
-    private router: Router)
+    private router: Router,
+  )
   {}
 
   ngOnInit(): void {
@@ -40,6 +42,10 @@ export class CocteilDetailComponent implements OnInit{
   }
 
   addLike():void {
+
+    /*if (this.user.idUser === undefined) {
+      console.log("добавлять нельзя");
+    }*/
     this.cocteilService.addLike(this.cocteil.name_of_cocteil)
       .subscribe((res) => {this.cocteil.like_of_cocteil +=1}, (err) => {console.log(err);})
   }
