@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 import {Cocteil} from "../cocteil";
 import {CocteilIngred} from "../cocteilIngred";
 import {Router} from "@angular/router";
-import {User} from "../user";
 import {CocteilService} from "./services/cocteil.servece";
+import {User} from "../user";
 
 @Component({
   selector: 'app-root',
@@ -17,18 +17,18 @@ export class AppComponent  {
   cocteilIngred: CocteilIngred;
   showDialog = false;
   addCocteilBatton = false;
+  user: User = new User();
   registrationBatton = true;
   messageFromShowDialog: string;
-
   constructor(
     private cocteilService: CocteilService,
     private router: Router,
-    public user: User)
+    )
   {}
 
   searchCocteil(name: string): void {
     let link = ['/detail',name];
-    this.router.navigate(link);
+    this.router.navigate(link, { queryParams: { id : this.user.idUser } });
   }
 
   homePage():void {
@@ -51,9 +51,9 @@ export class AppComponent  {
       this.searchUserDefault();
     }
     else {
-      this.user = res[0];
-      console.log(this.user.idUser);
       this.searchUserSucksesful();
+      this.user = res[0];
+
     }
   }
 
@@ -61,6 +61,9 @@ export class AppComponent  {
     this.addCocteilBatton = true;
     this.registrationBatton = false;
     this.showDialog = false;
+
+    let link = [''];
+    this.router.navigate(link);
   }
 
   searchUserDefault(){

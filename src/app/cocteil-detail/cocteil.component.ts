@@ -3,7 +3,9 @@ import {CocteilService} from '../services/cocteil.servece';
 import { Cocteil } from '../../cocteil'
 import {CocteilIngred} from "../../cocteilIngred";
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
-import {User} from "../../user";
+import {Subscription} from "rxjs";
+
+
 
 
 
@@ -17,6 +19,8 @@ export class CocteilDetailComponent implements OnInit{
 
   cocteil: Cocteil;
   cocteilIngred: CocteilIngred;
+  private querySubscription: Subscription;
+  private idUser: number;
 
   constructor(
     private cocteilService: CocteilService,
@@ -34,6 +38,13 @@ export class CocteilDetailComponent implements OnInit{
     this.route.paramMap
       .switchMap((params: ParamMap) => this.cocteilService.searichIndred(params.get('name')))
       .subscribe(res => this.cocteilIngred = res);
+
+    this.querySubscription = this.route.queryParams.subscribe(
+      (queryParam: any) => {
+        this.idUser = queryParam['id'];
+      }
+    );
+
   }
 
   cocteilNotFaunded():void {
@@ -41,11 +52,14 @@ export class CocteilDetailComponent implements OnInit{
     this.router.navigate(link);
   }
 
-  addLike():void {
+  checkUser():void {
+    console.log(this.idUser);
+    if (this.idUser != 0){
+      this.addLike();
+    }
+  }
 
-    /*if (this.user.idUser === undefined) {
-      console.log("добавлять нельзя");
-    }*/
+  addLike():void {
     this.cocteilService.addLike(this.cocteil.name_of_cocteil)
       .subscribe((res) => {this.cocteil.like_of_cocteil +=1}, (err) => {console.log(err);})
   }

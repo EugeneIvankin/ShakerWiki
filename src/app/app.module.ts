@@ -28,7 +28,7 @@ import {User} from "../user";
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
-    CocteilService, User],
+    CocteilService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

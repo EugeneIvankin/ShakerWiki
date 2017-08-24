@@ -38,7 +38,7 @@ export class PopCocteilService implements OnInit{
   }
 
   addLike():void {
-    this.cocteilService.addLike(this.cocteil.name_of_cocteil)
-      .subscribe((res) => {this.cocteil.like_of_cocteil +=1}, (err) => {console.log(err);})
+    /*this.cocteilService.addLike(this.cocteil.name_of_cocteil)
+      .subscribe((res) => {this.cocteil.like_of_cocteil +=1}, (err) => {console.log(err);})*/
   }
 }
