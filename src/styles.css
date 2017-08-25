@@ -38,13 +38,25 @@ body{
 }
 
 .textForLike{
-  color: #000;
   font-size: 120%;
   padding-top: 20%;
   z-index: 100;
   margin-top: 0;
   margin-bottom: 0;
   text-align: center;
+  font-family: Algerian;
+  color: black;
+}
+
+.textForLikeAdd{
+  font-size: 120%;
+  padding-top: 20%;
+  z-index: 100;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: Algerian;
+  color: whitesmoke;
 }
 
 #wineglass{
@@ -61,6 +73,15 @@ body{
   display: block;
   border-radius: 7% 7% 50% 50%/60% 60% 40% 40%;
 }
+
+#triangleAdd {
+  width: 40px;
+  height: 40px;
+  background: saddlebrown;
+  display: block;
+  border-radius: 7% 7% 50% 50%/60% 60% 40% 40%;
+}
+
 #rectanglVerticale {
   width: 4px;
   height: 8px;
@@ -75,7 +96,7 @@ body{
   border-radius: 10px;
 }
 
-#textAtLike {
+.textAtLike {
   width: 40px;
   height: 27px;
   cursor: default;
@@ -108,12 +129,6 @@ body{
   width: auto;
   height: auto;
 }
-
-#triangle:hover .textForLike{
-  font-family: Algerian;
-  color: whitesmoke;
-}
-
 
 .CocteilBatton {
   width: auto;

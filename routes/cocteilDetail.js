@@ -60,12 +60,14 @@ router.get('/popCocteil', function (req, res, next) {
 
 router.put('/addLike', jsonParser, function (req, res, next) {
   var name = req.body.name;
-  db.query('update info_of_cocteils set like_of_cocteil=like_of_cocteil+1 where name_of_cocteil= ? ', [name], function (err, rows) {
+  var idUser = req.body.idUser;
+  db.query('update info_of_cocteils set like_of_cocteil=like_of_cocteil+1 where name_of_cocteil= ?', [name], function (err, rows) {
     if (err) {
       res.send(err);
     }
     res.json(rows);
   });
+  db.query('insert into userlikecocteil (idUser, name_of_cocteil) value (?, ?)', [idUser, name]);
 });
 
 router.put('/addCocteil', jsonParser, function (req, res, next) {
@@ -131,6 +133,16 @@ router.put('/addUser', jsonParser, function (req, res, next) {
   db.query('insert into user (userName, userPassword) values (?, ?);', [name, password], function (err, rows) {
     if (err) {
       res.send(err);
+    }
+    res.json(rows);
+  });
+});
+
+router.post('/searchUsersCocteil', jsonParser, function(req, res) {
+  var idUser = req.body.idUser;
+  db.query('SELECT name_of_cocteil FROM userlikecocteil where idUser= ? ', [idUser], function (err, rows) {
+    if (err){
+      res.json(err);
     }
     res.json(rows);
   });

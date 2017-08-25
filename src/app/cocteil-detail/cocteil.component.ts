@@ -4,8 +4,7 @@ import { Cocteil } from '../../cocteil'
 import {CocteilIngred} from "../../cocteilIngred";
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {Subscription} from "rxjs";
-
-
+import {User} from "../../user";
 
 
 
@@ -19,15 +18,22 @@ export class CocteilDetailComponent implements OnInit{
 
   cocteil: Cocteil;
   cocteilIngred: CocteilIngred;
-  private querySubscription: Subscription;
-  private idUser: number;
+  currentIdUser: number;
+  usersCocteil: string;
+  imageLake = true;
+  imageLakeAdd = false;
 
   constructor(
     private cocteilService: CocteilService,
     private route: ActivatedRoute,
     private router: Router,
   )
-  {}
+  {this.usersCocteil = JSON.parse(localStorage.getItem('usersCocteil'));
+    if (this.usersCocteil !== null){
+      this.imageLake = false;
+      this.imageLakeAdd = true;
+    }
+  }
 
   ngOnInit(): void {
 
@@ -39,12 +45,6 @@ export class CocteilDetailComponent implements OnInit{
       .switchMap((params: ParamMap) => this.cocteilService.searichIndred(params.get('name')))
       .subscribe(res => this.cocteilIngred = res);
 
-    this.querySubscription = this.route.queryParams.subscribe(
-      (queryParam: any) => {
-        this.idUser = queryParam['id'];
-      }
-    );
-
   }
 
   cocteilNotFaunded():void {
@@ -52,16 +52,16 @@ export class CocteilDetailComponent implements OnInit{
     this.router.navigate(link);
   }
 
-  checkUser():void {
-    console.log(this.idUser);
-    if (this.idUser != 0){
-      this.addLike();
-    }
-  }
-
   addLike():void {
-    this.cocteilService.addLike(this.cocteil.name_of_cocteil)
-      .subscribe((res) => {this.cocteil.like_of_cocteil +=1}, (err) => {console.log(err);})
+    this.currentIdUser = JSON.parse(localStorage.getItem('currentUser'));
+    this.usersCocteil = JSON.parse(localStorage.getItem('usersCocteil'));
+    if(this.currentIdUser !== null && this.usersCocteil == null){
+      this.imageLake = false;
+      this.imageLakeAdd = true;
+      localStorage.setItem('usersCocteil', JSON.stringify(this.cocteil.name_of_cocteil));
+      this.cocteilService.addLike(this.cocteil.name_of_cocteil, this.currentIdUser)
+        .subscribe((res) => {this.cocteil.like_of_cocteil +=1}, (err) => {console.log(err);})
+    }
   }
 
 }

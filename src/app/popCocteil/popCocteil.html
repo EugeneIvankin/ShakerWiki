@@ -21,9 +21,14 @@
     <div id="like">
       <div id="wineglass">
 
-        <div id="triangle">
-          <div id="textAtLike">
+        <div *ngIf="imageLake" id="triangle" >
+          <div class="textAtLike">
             <p class="textForLike" (click)="addLike()"> {{cocteil?.like_of_cocteil}} </p>
+          </div>
+        </div>
+        <div *ngIf="imageLakeAdd" id="triangleAdd" >
+          <div class="textAtLike">
+            <p class="textForLikeAdd" (click)="addLike()"> {{cocteil?.like_of_cocteil}} </p>
           </div>
         </div>
         <div id="rectanglVerticale"></div>

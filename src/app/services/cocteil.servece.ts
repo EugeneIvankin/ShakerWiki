@@ -57,9 +57,9 @@ export class CocteilService {
     });
   }
 
-  addLike(name){
+  addLike(name, idUser){
     var headers = new Headers();
-    return this.http.put('/cocteilDetail/addLike', {name: name}, {headers: headers})
+    return this.http.put('/cocteilDetail/addLike', {name: name, idUser: idUser}, {headers: headers})
       .map(res=>res.json())
       .catch((error:any) =>{return Observable.throw(error);})
   }
@@ -91,5 +91,13 @@ export class CocteilService {
       .map(res=>res.json())
       .catch((error:any) =>{return Observable.throw(error);})
   }
+
+  searchUsersCocteil(idUser){
+    var headers = new Headers();
+    return this.http.post('/cocteilDetail/searchUsersCocteil', {idUser}, {headers: headers})
+      .map(res=>res.json())
+      .catch((error:any) =>{return Observable.throw(error);})
+  }
+
 }
 
