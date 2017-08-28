@@ -26,7 +26,6 @@ export class AppComponent  {
 
   constructor(
     private cocteilService: CocteilService,
-    private location: Location,
     private router: Router)
     {
       this.currentIdUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -68,9 +67,7 @@ export class AppComponent  {
     else {
       this.searchUserSucksesful(res);
       this.searchUsersCocteil(res[0].idUser);
-      //this.location.back();
-      let link = [''];
-      this.router.navigate(link);
+      location.reload();
     }
   }
 
@@ -89,6 +86,7 @@ export class AppComponent  {
     this.addCocteilBatton = false;
     this.registrationBatton = true;
     localStorage.clear();
+    location.reload();
   }
 
   addUser(name:string, password:string):void{

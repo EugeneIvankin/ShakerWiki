@@ -59,12 +59,9 @@ export class PopCocteilService implements OnInit{
 
   addLike():void {
     this.currentIdUser = JSON.parse(localStorage.getItem('currentUser'));
-    //this.usersCocteil = JSON.parse(localStorage.getItem('usersCocteil'));
-    console.log(this.currentIdUser, this.userCocteil);
     if(this.currentIdUser !== null && this.userCocteil == null){
       this.imageLake = false;
       this.imageLakeAdd = true;
-      //localStorage.setItem('usersCocteil', JSON.stringify(this.cocteil.name_of_cocteil));
       this.cocteilService.addLike(this.cocteil.name_of_cocteil, this.currentIdUser)
         .subscribe((res) => {this.cocteil.like_of_cocteil +=1}, (err) => {console.log(err);})
     }

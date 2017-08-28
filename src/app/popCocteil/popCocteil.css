@@ -23,7 +23,7 @@
 }
 
 #imageDiv{
-  height: auto;
+  height: 70vh;
   width: 38%;
   margin-top: 0%;
   margin-left: 0%;
@@ -41,6 +41,17 @@
   padding: 10px;
 }
 
+#imageCocteilDiv{
+  width: auto;
+  height: auto;
+  margin-top: 30%;
+  text-align: center;
+}
 
-
+#image{
+  width: 60%;
+  image-rendering: pixelated;
+  margin: 0 auto;
+  display: block;
+}
 
