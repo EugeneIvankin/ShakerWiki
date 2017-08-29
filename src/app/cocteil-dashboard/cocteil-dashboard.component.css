@@ -34,5 +34,12 @@
 p {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 130%;
+  font-size: 115%;
+}
+
+#image{
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
+  display: block;
 }

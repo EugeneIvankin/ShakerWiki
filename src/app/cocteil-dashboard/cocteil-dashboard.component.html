@@ -4,7 +4,9 @@
     <div *ngFor="let cocteils of allCocteils"  [routerLink]="['/detail', cocteils?.name_of_cocteil]">
 
       <div id="smallView">
-        <div id="smallIcon"></div>
+        <div *ngIf="cocteils?.name_of_cocteil" id="smallIcon">
+          <img id="image" src="../../images/{{cocteils?.name_of_cocteil}}.png">
+        </div>
         <div id="smallViewName">
           <p>{{cocteils?.name_of_cocteil}}</p>
         </div>

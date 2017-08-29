@@ -6,7 +6,7 @@
 
   <div class="nameDiv">
     <textarea type="text" class="addCocteilIngredient" placeholder="Название коктейля" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel"
-           required pattern="[а-яА-Я-0-9]{3,9}"></textarea>
+           required pattern="[а-яА-Я-0-9 ]{3,20}"></textarea>
   </div>
 
   <div id="infoOfCocteil">
@@ -17,19 +17,19 @@
 
       <textarea class="infoCocteil" type="text" placeholder="Способ приготовления коктейля..."
                 [ngModel]="cocteil.cockteils_preparation" #cocteilPreparation="ngModel"
-                required pattern="[а-яА-Яa-zA-Z.:;,!\s]{10,500}"></textarea>
+                required pattern="[а-яА-Яa-zA-Z.:;,!\s()<<>>]{10,500}"></textarea>
       </div>
 
       <div id="inputFields">
         <div class="inputFieldIngredient">
           <textarea class="addCocteilIngredient" type="text" placeholder="Название ингридиента"
                  [ngModel]="cocteilIngred.name_of_ingredient" #ingredient="ngModel"
-                 required pattern="[а-яА-Яa-zA-Z]{3,10}"></textarea>
+                 required pattern="[а-яА-Яa-zA-Z ]{3,20}"></textarea>
         </div>
         <div class="inputFieldIngredient">
           <textarea class="addCocteilIngredient" type="text" placeholder="Количество ингридиента"
                     [ngModel]="cocteilIngred.volum" #volum="ngModel"
-                    required pattern="[а-я.\s0-9]{4,10}">></textarea>
+                    required pattern="[а-я.\s0-9]{0,15}">></textarea>
         </div>
         <div id="addIngridient">
           <button class="CocteilBatton" (click)="addCocteilIngredient(ingredient.value, volum.value)"
