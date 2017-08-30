@@ -3,17 +3,10 @@ var router = express.Router();
 var db = require('../bin/databaseConnection.js');
 var bodyParser = require("body-parser");
 
-
-/*router.get('/', function(req, res, next) {
-  db.query('SELECT name_of_cocteil, history_of_cocteil, like_of_cocteil, cockteils_preparation ' +
-    'FROM info_of_cocteils where name_of_cocteil= "Американо"', function (err, rows) {
-    if (err){
-      res.send(err);
-    }
-    res.json(rows);
-  });
-});*/
-
+//вынести запросы в одтельные методы
+//разбить по файлам
+//убрать копи-паст
+//jsonParser
 
 var jsonParser = bodyParser.json();
 
@@ -22,7 +15,7 @@ router.post('/',jsonParser, function(req, res, next) {
   db.query('SELECT name_of_cocteil, history_of_cocteil, like_of_cocteil, cockteils_preparation ' +
     'FROM info_of_cocteils where name_of_cocteil= ? ', [name], function (err, rows) {
     if (err){
-      res.json("Коктейл не найден");
+      res.json(err);
     }
     res.json(rows[0]);
   });
@@ -33,7 +26,7 @@ router.post('/ingredients', jsonParser, function(req, res, next) {
   var name = req.body.name;
   db.query('SELECT name_of_ingredient, volum FROM cocteil_ingredients where name_of_cocteil= ? ', [name], function (err, rows) {
     if (err){
-      res.json("Коктейл не найден");
+      res.json(err);
     }
     res.json(rows);
   });
@@ -140,11 +133,22 @@ router.put('/addUser', jsonParser, function (req, res, next) {
 
 router.post('/searchUsersCocteil', jsonParser, function(req, res) {
   var idUser = req.body.idUser;
+  var usersCocteil = [];
   db.query('SELECT name_of_cocteil FROM userlikecocteil where idUser= ? ', [idUser], function (err, rows) {
     if (err){
       res.json(err);
     }
-    res.json(rows);
+    else {
+      if (rows.length !== 0){
+        for (var i=0; i<rows.length; i++){
+          usersCocteil[i] = rows[i].name_of_cocteil;
+        }
+        res.json(usersCocteil);
+      }
+      else {
+        res.json(usersCocteil);
+      }
+    }
   });
 });
 

@@ -1,0 +1,14 @@
+<div id="allCocteil">
+
+  <div *ngFor="let cocteils of usersCocteils"  [routerLink]="['/detail', cocteils]">
+    <div id="smallView">
+      <div *ngIf="cocteils" id="smallIcon">
+        <img id="image" src="../../images/{{cocteils}}.png">
+      </div>
+      <div id="smallViewName">
+        <p>{{cocteils}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>

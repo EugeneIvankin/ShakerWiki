@@ -35,21 +35,27 @@
 
     </div>
 
+    <div id="favoriteCocteils">
+      <button *ngIf="addCocteilBatton" class="CocteilBatton" routerLink="/favoriteCocteils" routerLinkActive="active">
+        <p class="textForBatton">Любимые</p>
+      </button>
+    </div>
+
     <div id="addCocteil">
       <button *ngIf="addCocteilBatton" class="CocteilBatton" routerLink="/addCocteil" routerLinkActive="active">
         <p class="textForBatton">Добавить коктейль</p>
       </button>
     </div>
 
-    <div id="registation">
-      <button *ngIf="registrationBatton" class="CocteilBatton" (click)="showDialog = !showDialog">
-        <p class="textForBatton">Регистрация/Вход</p>
-      </button>
-    </div>
-
     <div id="logOutDiv">
       <button *ngIf="addCocteilBatton" class="CocteilBatton" (click)="logOut();">
         <p class="textForBatton">Выход</p>
+      </button>
+    </div>
+
+    <div id="registation" *ngIf="registrationBatton">
+      <button  class="CocteilBatton" (click)="showDialog = !showDialog">
+        <p class="textForBatton">Регистрация/Вход</p>
       </button>
     </div>
 

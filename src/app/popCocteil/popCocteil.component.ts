@@ -6,6 +6,7 @@ import {CocteilService} from "../services/cocteil.servece";
 import {Cocteil} from "../../cocteil";
 import {CocteilIngred} from "../../cocteilIngred";
 import {User} from "../../user";
+import {stringDistance} from "codelyzer/util/utils";
 
 @Component({
   selector: 'popCocteil',
@@ -18,7 +19,6 @@ export class PopCocteilService implements OnInit{
   cocteilIngred: CocteilIngred;
   currentIdUser: number;
   usersCocteil = [];
-  userCocteil: string;
   name: any;
   imageLake = true;
   imageLakeAdd = false;
@@ -26,6 +26,7 @@ export class PopCocteilService implements OnInit{
   constructor(
     private cocteilService: CocteilService)
   {
+    this.currentIdUser = JSON.parse(localStorage.getItem('currentUser'));
     this.usersCocteil = JSON.parse(localStorage.getItem('usersCocteil'));
   }
 
@@ -34,38 +35,54 @@ export class PopCocteilService implements OnInit{
       this.name =res;
       this.cocteilService.searichCocteil(this.name)
         .subscribe((res) => {
-          this.cocteil=res;
-          if (this.usersCocteil !== null){
-            this.searchCocteil()}
-          });
+          this.cocteil = res;
+          if (this.usersCocteil !== null) {
+            if (!this.searchCocteil()) {
+              this.imageLake = false;
+              this.imageLakeAdd = true;
+            }
+          }
+        });
       this.cocteilService.searichIndred(this.name)
         .subscribe((res) => this.cocteilIngred=res)
     }, (err) => {
       console.log(err);
     });
-
-
   }
 
-  searchCocteil(){
-    for (var i=0; i<this.usersCocteil.length; i++){
-      if(this.cocteil.name_of_cocteil == this.usersCocteil[i].name_of_cocteil){
-        this.userCocteil = this.usersCocteil[i].name_of_cocteil;
+ searchCocteil (): boolean {
+   let addLike = true;
+     for (var i = 0; i < this.usersCocteil.length; i++) {
+       if (this.cocteil.name_of_cocteil !== this.usersCocteil[i]) {
+         addLike = true;
+       }
+       else {
+         addLike = false;
+         break;
+       }
+     }
+     return addLike
+ }
+
+
+
+  addLike():void {
+    if (this.currentIdUser !== null) {
+      if (this.searchCocteil()) {
         this.imageLake = false;
         this.imageLakeAdd = true;
+        this.usersCocteil.push(this.cocteil.name_of_cocteil);
+        localStorage.setItem('usersCocteil', JSON.stringify(this.usersCocteil));
+        this.usersCocteil = JSON.parse(localStorage.getItem('usersCocteil'));
+        this.cocteilService.addLike(this.cocteil.name_of_cocteil, this.currentIdUser)
+          .subscribe((res) => {
+            this.cocteil.like_of_cocteil += 1
+          }, (err) => {
+            console.log(err);
+          })
       }
     }
   }
 
-  addLike():void {
-    this.currentIdUser = JSON.parse(localStorage.getItem('currentUser'));
-    if(this.currentIdUser !== null && this.userCocteil == null){
-      this.imageLake = false;
-      this.imageLakeAdd = true;
-      localStorage.setItem('usersCocteil', JSON.stringify(this.cocteil.name_of_cocteil));
-      console.log(JSON.parse(localStorage.getItem('usersCocteil')));
-      this.cocteilService.addLike(this.cocteil.name_of_cocteil, this.currentIdUser)
-        .subscribe((res) => {this.cocteil.like_of_cocteil +=1}, (err) => {console.log(err);})
-    }
-  }
+
 }

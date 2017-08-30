@@ -9,6 +9,7 @@ import {AddCocteil} from "../addCocteil/addCocteil";
 import {AddedCocteil} from "../addedCocteil/addedCocteil";
 import {AppComponent} from "../app.component";
 import {RegistrationComponent} from "../registration/registration";
+import {FavoriteCocteils} from "../favoriteCocteils/favoriteCocteils";
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'dashboard',  component: CocteilDashboard },
   { path: 'detail/:name',  component: CocteilDetailComponent },
   { path: 'cocteilNotFaunded', component: CocteilNotFaunded },
+  { path: 'favoriteCocteils', component: FavoriteCocteils },
   { path: 'addCocteil', component: AddCocteil },
   { path: 'addedCocteil', component: AddedCocteil }
 

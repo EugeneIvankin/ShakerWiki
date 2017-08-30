@@ -16,12 +16,13 @@ import {AddedCocteil} from "./addedCocteil/addedCocteil";
 import {RegistrationComponent} from "./registration/registration";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {User} from "../user";
+import {FavoriteCocteils} from "./favoriteCocteils/favoriteCocteils";
 
 
 @NgModule({
   declarations: [
     AppComponent, CocteilDetailComponent, CocteilDashboard, PopCocteilService, CocteilNotFaunded,
-    AddCocteil, AddedCocteil, RegistrationComponent
+    AddCocteil, AddedCocteil, RegistrationComponent, FavoriteCocteils
   ],
   imports: [
     BrowserModule, HttpModule, FormsModule, AppRoutingModule, BrowserAnimationsModule

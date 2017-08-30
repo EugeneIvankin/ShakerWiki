@@ -20,7 +20,6 @@ export class CocteilDetailComponent implements OnInit{
   cocteilIngred: CocteilIngred;
   currentIdUser: number;
   usersCocteil = [];
-  userCocteil: string;
   imageLake = true;
   imageLakeAdd = false;
 
@@ -29,21 +28,23 @@ export class CocteilDetailComponent implements OnInit{
     private route: ActivatedRoute,
     private router: Router,
   )
-  {this.usersCocteil = JSON.parse(localStorage.getItem('usersCocteil'));
-    if (this.usersCocteil !== null){
-      this.imageLake = false;
-      this.imageLakeAdd = true;
-    }
+  {
+    this.currentIdUser = JSON.parse(localStorage.getItem('currentUser'));
+    this.usersCocteil = JSON.parse(localStorage.getItem('usersCocteil'));
   }
 
   ngOnInit(): void {
 
     this.route.paramMap
       .switchMap((params: ParamMap) => this.cocteilService.searichCocteil(params.get('name')))
-      .subscribe(res => {this.cocteil = res;
-                  if (this.usersCocteil !== null){
-                      this.searchCocteil()
-                  }
+      .subscribe(res => {
+        this.cocteil = res;
+        if (this.usersCocteil !== null) {
+          if (!this.searchCocteil()) {
+            this.imageLake = false;
+            this.imageLakeAdd = true;
+          }
+        }
       }, err => this.cocteilNotFaunded());
 
     this.route.paramMap
@@ -57,27 +58,35 @@ export class CocteilDetailComponent implements OnInit{
     this.router.navigate(link);
   }
 
-  searchCocteil(){
-    for (var i=0; i<this.usersCocteil.length; i++){
-      if(this.cocteil.name_of_cocteil == this.usersCocteil[i].name_of_cocteil){
-        this.userCocteil = this.usersCocteil[i].name_of_cocteil;
-        this.imageLake = false;
-        this.imageLakeAdd = true;
+  searchCocteil (): boolean {
+    let addLike = true;
+    for (var i = 0; i < this.usersCocteil.length; i++) {
+      if (this.cocteil.name_of_cocteil !== this.usersCocteil[i]) {
+        addLike = true;
+      }
+      else {
+        addLike = false;
+        break;
       }
     }
+    return addLike
   }
 
   addLike():void {
-    console.log(JSON.parse(localStorage.getItem('usersCocteil')));
-    this.currentIdUser = JSON.parse(localStorage.getItem('currentUser'));
-    this.usersCocteil = JSON.parse(localStorage.getItem('usersCocteil'));
-    if(this.currentIdUser !== null && this.userCocteil == null){
-      this.imageLake = false;
-      this.imageLakeAdd = true;
-      localStorage.setItem('usersCocteil', JSON.stringify(this.cocteil.name_of_cocteil));
-      console.log(JSON.parse(localStorage.getItem('usersCocteil')));
-      this.cocteilService.addLike(this.cocteil.name_of_cocteil, this.currentIdUser)
-        .subscribe((res) => {this.cocteil.like_of_cocteil +=1}, (err) => {console.log(err);})
+    if (this.currentIdUser !== null) {
+      if (this.searchCocteil()) {
+        this.imageLake = false;
+        this.imageLakeAdd = true;
+        this.usersCocteil.push(this.cocteil.name_of_cocteil);
+        localStorage.setItem('usersCocteil', JSON.stringify(this.usersCocteil));
+        this.usersCocteil = JSON.parse(localStorage.getItem('usersCocteil'));
+        this.cocteilService.addLike(this.cocteil.name_of_cocteil, this.currentIdUser)
+          .subscribe((res) => {
+            this.cocteil.like_of_cocteil += 1
+          }, (err) => {
+            console.log(err);
+          })
+      }
     }
   }
 

@@ -93,10 +93,12 @@ export class CocteilService {
   }
 
   searchUsersCocteil(idUser){
-    var headers = new Headers();
-    return this.http.post('/cocteilDetail/searchUsersCocteil', {idUser}, {headers: headers})
-      .map(res=>res.json())
-      .catch((error:any) =>{return Observable.throw(error);})
+    return new Promise ((resolve, reject) => {
+      var headers = new Headers();
+      this.http.post('/cocteilDetail/searchUsersCocteil',{idUser: idUser}, {headers: headers} )
+        .map(res=>res.json())
+        .subscribe(res => { resolve (res); }, (err) => {reject (err); });
+    });
   }
 
 }

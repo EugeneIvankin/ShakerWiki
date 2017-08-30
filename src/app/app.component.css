@@ -197,3 +197,9 @@ h1{
   border-left: 0;
   border-color: green;
 }
+
+#favoriteCocteils{
+  width: 15%;
+  margin-left: 1%;
+  float: left;
+}

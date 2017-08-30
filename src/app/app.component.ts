@@ -52,12 +52,14 @@ export class AppComponent  {
 
   searchUser(name:string, password:string):void{
     this.cocteilService.searchUser(name, password)
-      .subscribe((res) => {this.searchUserAnswer(res)}, (err) => {console.log(err);})
+      .subscribe((res) => {this.searchUserAnswer(res)},
+                  (err) => {console.log(err);})
   }
 
   searchUsersCocteil(idUser):void{
     this.cocteilService.searchUsersCocteil(idUser)
-      .subscribe((res) => {localStorage.setItem('usersCocteil', JSON.stringify(res));}, (err) => {console.log(err);})
+      .then((res) => localStorage.setItem('usersCocteil', JSON.stringify(res)),
+            (err) => {console.log(err);})
   }
 
   searchUserAnswer(res){
@@ -91,7 +93,8 @@ export class AppComponent  {
 
   addUser(name:string, password:string):void{
     this.cocteilService.addUser(name, password)
-      .subscribe((res) => {this.addUserAnswer(res)}, (err) => {console.log(err);})
+      .subscribe((res) => {this.addUserAnswer(res)},
+                  (err) => {console.log(err);})
   }
 
   addUserAnswer(res):void{
