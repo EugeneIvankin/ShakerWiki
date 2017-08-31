@@ -3,13 +3,20 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng": "ng",
+    /*"ng": "ng",
     "start": "node ./bin/www",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --aot -prod"*/
+    "start": "node ./bin/www",
+    "lint": "tslint \"src/**/*.ts\"",
+    "test": "ng test",
+    "pree2e": "webdriver-manager update",
+    "e2e": "protractor",
+    "preinstall": "npm install -g angular-cli",
+    "postinstall": "ng build && mv dist/* ."
   },
   "private": true,
   "dependencies": {
