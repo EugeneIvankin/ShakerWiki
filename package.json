@@ -3,13 +3,6 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    /*"ng": "ng",
-    "start": "node ./bin/www",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"*/
     "start": "node ./bin/www",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
