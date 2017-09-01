@@ -6,65 +6,64 @@
 
   <hr>
 
-  <div id="battons">
+  <div id="navigationDiv">
+    <div id="battons">
 
-    <div id="allCocteilBatton">
-      <button class="CocteilBatton" routerLink="/dashboard" routerLinkActive="active">
-        <div class="arealForTextBotton">
-          <p class="textForBatton">Все коктейли</p>
+      <div id="searechCocteil">
+        <input type="text" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel" required pattern="[а-яА-Я-0-9]{3,9}"
+               placeholder="Название коктейля"/>
+        <div id="searechCocteilBatton">
+          <button class="CocteilBatton" [disabled]="cocteilName.invalid" (click)="searchCocteil(cocteilName.value);">
+            <p class="textForBatton">Найти</p>
+          </button>
         </div>
-      </button>
+      </div>
+
+      <div id="allCocteilBatton">
+        <button class="CocteilBatton" routerLink="/dashboard" routerLinkActive="active">
+          <div class="arealForTextBotton">
+            <p class="textForBatton">Все коктейли</p>
+          </div>
+        </button>
+      </div>
+
+      <div id="popCocteilBatton">
+        <button class="CocteilBatton"  (click)="popCocteil();">
+          <div class="arealForTextBotton">
+            <p class="textForBatton">Самый лучший</p>
+          </div>
+        </button>
+      </div>
+
+      <div id="favoriteCocteils">
+        <button *ngIf="addCocteilBatton" class="CocteilBatton" routerLink="/favoriteCocteils" routerLinkActive="active">
+          <p class="textForBatton">Любимые</p>
+        </button>
+      </div>
+
+      <div id="addCocteil">
+        <button *ngIf="addCocteilBatton" class="CocteilBatton" routerLink="/addCocteil" routerLinkActive="active">
+          <p class="textForBatton">Добавить коктейль</p>
+        </button>
+      </div>
+
+      <div id="logOutDiv">
+        <button *ngIf="addCocteilBatton" class="CocteilBatton" (click)="logOut();">
+          <p class="textForBatton">Выход</p>
+        </button>
+      </div>
+
+      <div id="registation" *ngIf="registrationBatton">
+        <button  class="CocteilBatton" (click)="showDialog = !showDialog">
+          <p class="textForBatton">Регистрация/Вход</p>
+        </button>
+      </div>
     </div>
 
-    <div id="popCocteilBatton">
-      <button class="CocteilBatton"  (click)="popCocteil();">
-        <div class="arealForTextBotton">
-          <p class="textForBatton">Самый лучший</p>
-        </div>
-      </button>
-    </div>
-
-    <div id="searechCocteil">
-
-      <input type="text" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel" required pattern="[а-яА-Я-0-9]{3,9}"
-      placeholder="Название коктейля"/>
-
-      <button class="CocteilBatton" [disabled]="cocteilName.invalid" (click)="searchCocteil(cocteilName.value);">
-        <p class="textForBatton">Найти</p>
-      </button>
-
-    </div>
-
-    <div id="favoriteCocteils">
-      <button *ngIf="addCocteilBatton" class="CocteilBatton" routerLink="/favoriteCocteils" routerLinkActive="active">
-        <p class="textForBatton">Любимые</p>
-      </button>
-    </div>
-
-    <div id="addCocteil">
-      <button *ngIf="addCocteilBatton" class="CocteilBatton" routerLink="/addCocteil" routerLinkActive="active">
-        <p class="textForBatton">Добавить коктейль</p>
-      </button>
-    </div>
-
-    <div id="logOutDiv">
-      <button *ngIf="addCocteilBatton" class="CocteilBatton" (click)="logOut();">
-        <p class="textForBatton">Выход</p>
-      </button>
-    </div>
-
-    <div id="registation" *ngIf="registrationBatton">
-      <button  class="CocteilBatton" (click)="showDialog = !showDialog">
-        <p class="textForBatton">Регистрация/Вход</p>
-      </button>
-    </div>
+    <hr>
 
   </div>
 
-  <hr style="margin-bottom: 0">
-  <div id="message" >
-    <p id="messageText" [hidden]="cocteilName.valid || cocteilName.untouched">Название должно содержать минимум 3 символа, только русские буквы и цифры</p>
-  </div>
 
 <router-outlet></router-outlet>
 
@@ -99,8 +98,12 @@
       </button>
     </div>
 
-    <div id="messageFromShowDialogDiv">
+    <div class="messageFromShowDialogDiv">
       <p class="textForBatton">{{messageFromShowDialog}}</p>
+    </div>
+
+    <div class="messageFromShowDialogDiv" [hidden]="(name.valid && password.valid) || name.untouched && password.untouched">
+      <p class="textForBatton">Должны быть заполнены все поля</p>
     </div>
 
   </div>
