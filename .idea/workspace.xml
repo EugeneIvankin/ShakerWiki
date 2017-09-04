@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8592d972-4a2f-4110-8b54-d9c91b407473" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cocteil.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/ShakerWiki.mwb" afterPath="$PROJECT_DIR$/Database/ShakerWiki.mwb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/ShakerWiki.mwb.bak" afterPath="$PROJECT_DIR$/Database/ShakerWiki.mwb.bak" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/routers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/ShakerWiki.sql" afterPath="$PROJECT_DIR$/Database/ShakerWiki.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/cocteilDetail.js" afterPath="$PROJECT_DIR$/routes/cocteilDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/addCocteil/addCocteil.html" afterPath="$PROJECT_DIR$/src/app/addCocteil/addCocteil.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.ts" afterPath="$PROJECT_DIR$/src/app/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.module.ts" afterPath="$PROJECT_DIR$/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/cocteil-detail/cocteil.component.html" afterPath="$PROJECT_DIR$/src/app/cocteil-detail/cocteil.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/cocteil-detail/cocteil.component.ts" afterPath="$PROJECT_DIR$/src/app/cocteil-detail/cocteil.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/cocteilNotFaunded/cocteilNotFaunded.css" afterPath="$PROJECT_DIR$/src/app/cocteilNotFaunded/cocteilNotFaunded.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/favoriteCocteils/favoriteCocteils.css" afterPath="$PROJECT_DIR$/src/app/favoriteCocteils/favoriteCocteils.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/favoriteCocteils/favoriteCocteils.html" afterPath="$PROJECT_DIR$/src/app/favoriteCocteils/favoriteCocteils.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/favoriteCocteils/favoriteCocteils.ts" afterPath="$PROJECT_DIR$/src/app/favoriteCocteils/favoriteCocteils.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/popCocteil/popCocteil.component.ts" afterPath="$PROJECT_DIR$/src/app/popCocteil/popCocteil.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/popCocteil/popCocteil.html" afterPath="$PROJECT_DIR$/src/app/popCocteil/popCocteil.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/cocteil.servece.ts" afterPath="$PROJECT_DIR$/src/app/services/cocteil.servece.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cocteil.ts" afterPath="$PROJECT_DIR$/src/cocteil.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cocteilIngred.ts" afterPath="$PROJECT_DIR$/src/cocteilIngred.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -46,8 +29,18 @@
       <file leaf-file-name="cocteilDetail.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/cocteilDetail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="408">
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/routers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -58,10 +51,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -71,7 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/userTab.component.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/app/addCocteil.html" />
         <option value="$PROJECT_DIR$/src/app/cocteil.component.html" />
@@ -119,9 +111,10 @@
         <option value="$PROJECT_DIR$/src/app/cocteilNotFaunded/cocteilNotFaunded.css" />
         <option value="$PROJECT_DIR$/src/app/services/cocteil.servece.ts" />
         <option value="$PROJECT_DIR$/src/app/cocteil-detail/cocteil.component.html" />
-        <option value="$PROJECT_DIR$/routes/cocteilDetail.js" />
         <option value="$PROJECT_DIR$/src/app/popCocteil/popCocteil.component.ts" />
         <option value="$PROJECT_DIR$/src/app/cocteil-detail/cocteil.component.ts" />
+        <option value="$PROJECT_DIR$/routes/cocteilDetail.js" />
+        <option value="$PROJECT_DIR$/routes/routers.js" />
       </list>
     </option>
   </component>
@@ -427,7 +420,7 @@
       <workItem from="1504076046791" duration="23059000" />
       <workItem from="1504162016231" duration="14242000" />
       <workItem from="1504249982443" duration="15792000" />
-      <workItem from="1504512657421" duration="16533000" />
+      <workItem from="1504512657421" duration="21060000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1502456431841</created>
@@ -695,11 +688,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504281719719</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="add">
+      <created>1504532857032</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1504532857032</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="505063000" />
+    <option name="totallyTimeSpent" value="509590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -751,13 +751,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdf.html" />
     <entry file="file://$PROJECT_DIR$/ggg.html" />
     <entry file="file://$PROJECT_DIR$/src/app/services/userTab.component.css" />
@@ -1101,10 +1094,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/routers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/cocteilDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state relative-caret-position="408">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
           <folding />
         </state>
       </provider>

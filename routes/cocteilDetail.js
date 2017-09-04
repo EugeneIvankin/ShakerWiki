@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var db = require('../bin/databaseConnection.js');
 var bodyParser = require("body-parser");
+var routers = require('./routers')
 
 //вынести запросы в одтельные методы
 //разбить по файлам
@@ -11,13 +12,17 @@ var bodyParser = require("body-parser");
 var jsonParser = bodyParser.json();
 
 router.post('/cocteil',jsonParser, function(req, res) {
-  var id = req.body.id;
-  db.query('SELECT * FROM info_of_cocteils where idCocteil= ? ', [id], function (err, rows) {
+  //var id = req.body.id;
+  routers.getcocteilInfo(req.body.id, function (rows) {
+    console.log(rows);
+    res.json(rows);
+  });
+  /*db.query('SELECT * FROM info_of_cocteils where idCocteil= ? ', [id], function (err, rows) {
     if (err){
       res.json(err);
     }
     res.json(rows);
-  });
+  });*/
 });
 
 router.post('/ingredients', jsonParser, function(req, res) {
