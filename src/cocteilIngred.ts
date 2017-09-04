@@ -1,4 +1,4 @@
 export class CocteilIngred{
-  name_of_ingredient: string;
+  ingredient: string;
   volum: number;
 }

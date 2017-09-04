@@ -1,3 +1,8 @@
+h1 {
+  color: whitesmoke;
+  margin: 0;
+}
+
 #smallView {
   width: 130px;
   height: 120px;
@@ -42,4 +47,10 @@ p {
   width: auto;
   margin: 0 auto;
   display: block;
+}
+
+#message{
+  height: auto;
+  width: 100%;
+  text-align: center;
 }

@@ -15,7 +15,6 @@ import {AddCocteil} from "./addCocteil/addCocteil";
 import {AddedCocteil} from "./addedCocteil/addedCocteil";
 import {RegistrationComponent} from "./registration/registration";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {User} from "../user";
 import {FavoriteCocteils} from "./favoriteCocteils/favoriteCocteils";
 
 

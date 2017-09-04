@@ -12,8 +12,18 @@ import {CocteilService} from "../services/cocteil.servece";
 })
 
 
-export class FavoriteCocteils{
+export class FavoriteCocteils implements OnInit{
 
   usersCocteils = JSON.parse(localStorage.getItem('usersCocteil'));
+  usersCocteilsIsEmpty = false;
+
+
+  ngOnInit(): void {
+    if (this.usersCocteils.length == 0){
+      this.usersCocteilsIsEmpty = true;
+    }
+  }
+
+
 
 }

@@ -1,12 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {Http, Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
-import {Observable} from "rxjs";
 import {CocteilService} from "../services/cocteil.servece";
 import {Cocteil} from "../../cocteil";
 import {CocteilIngred} from "../../cocteilIngred";
-import {User} from "../../user";
-import {stringDistance} from "codelyzer/util/utils";
+
 
 @Component({
   selector: 'popCocteil',
@@ -19,7 +16,7 @@ export class PopCocteilService implements OnInit{
   cocteilIngred: CocteilIngred;
   currentIdUser: number;
   usersCocteil = [];
-  name: any;
+  idCocteil: any;
   imageLake = true;
   imageLakeAdd = false;
 
@@ -32,10 +29,10 @@ export class PopCocteilService implements OnInit{
 
   ngOnInit(): void {
     this.cocteilService.popCocteil().then((res) => {
-      this.name =res;
-      this.cocteilService.searichCocteil(this.name)
+      this.idCocteil = res[0].idCocteil;
+      this.cocteilService.searichCocteil(this.idCocteil)
         .subscribe((res) => {
-          this.cocteil = res;
+          this.cocteil = res[0];
           if (this.usersCocteil !== null) {
             if (!this.searchCocteil()) {
               this.imageLake = false;
@@ -43,7 +40,7 @@ export class PopCocteilService implements OnInit{
             }
           }
         });
-      this.cocteilService.searichIndred(this.name)
+      this.cocteilService.searichIndred(this.idCocteil)
         .subscribe((res) => this.cocteilIngred=res)
     }, (err) => {
       console.log(err);
@@ -64,8 +61,6 @@ export class PopCocteilService implements OnInit{
      return addLike
  }
 
-
-
   addLike():void {
     if (this.currentIdUser !== null) {
       if (this.searchCocteil()) {
@@ -74,7 +69,7 @@ export class PopCocteilService implements OnInit{
         this.usersCocteil.push(this.cocteil.name_of_cocteil);
         localStorage.setItem('usersCocteil', JSON.stringify(this.usersCocteil));
         this.usersCocteil = JSON.parse(localStorage.getItem('usersCocteil'));
-        this.cocteilService.addLike(this.cocteil.name_of_cocteil, this.currentIdUser)
+        this.cocteilService.addLike(this.idCocteil, this.currentIdUser)
           .subscribe((res) => {
             this.cocteil.like_of_cocteil += 1
           }, (err) => {

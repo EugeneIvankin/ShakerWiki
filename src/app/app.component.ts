@@ -56,11 +56,7 @@ export class AppComponent  {
                   (err) => {console.log(err);})
   }
 
-  searchUsersCocteil(idUser):void{
-    this.cocteilService.searchUsersCocteil(idUser)
-      .then((res) => localStorage.setItem('usersCocteil', JSON.stringify(res)),
-            (err) => {console.log(err);})
-  }
+
 
   searchUserAnswer(res){
     if(res[0]==null){
@@ -78,6 +74,12 @@ export class AppComponent  {
     this.registrationBatton = false;
     this.showDialog = false;
     localStorage.setItem('currentUser', JSON.stringify(res[0].idUser));
+  }
+
+  searchUsersCocteil(idUser):void{
+    this.cocteilService.searchUsersCocteil(idUser)
+      .then((res) => localStorage.setItem('usersCocteil', JSON.stringify(res)),
+        (err) => {console.log(err);})
   }
 
   searchUserDefault(){

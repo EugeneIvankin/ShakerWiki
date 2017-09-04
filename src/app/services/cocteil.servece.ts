@@ -4,44 +4,31 @@ import 'rxjs/add/operator/map';
 import {Observable} from "rxjs";
 
 
-
-
 @Injectable()
 export class CocteilService {
   constructor(private http: Http) {}
 
- /* getCocteil() {
-    return new Promise ((resolve, reject) => {
-      this.http.get('/cocteilDetail')
-        .map(res => res.json())
-        .subscribe(res => { resolve (res); }, (err) => {reject (err); });
-    });
-  }*/
-
-
-  /*getCocteilIngrediens() {
-    return new Promise ((resolve, reject) => {
-      this.http.get('/cocteilDetail/ingredients')
-        .map(res => res.json())
-        .subscribe(res => { resolve (res); }, (err) => {reject (err); });
-    });
-  }*/
-
-
-  searichCocteil(name){
+  searichCocteil(id){
     var headers = new Headers();
-    return this.http.post('/cocteilDetail', {name: name}, {headers: headers})
+    return this.http.post('/cocteilDetail/cocteil', {id: id}, {headers: headers})
         .map(res=>res.json())
         .catch((error:any) =>{return Observable.throw(error);})
 
   }
 
-  searichIndred(name){
+  searichIndred(id){
     var headers = new Headers();
-    return this.http.post('/cocteilDetail/ingredients', {name: name}, {headers: headers})
+    return this.http.post('/cocteilDetail/ingredients', {id: id}, {headers: headers})
       .map(res=>res.json())
       .catch((error:any) =>{return Observable.throw(error);})
 
+  }
+
+  searichIdOfCocteil(name){
+    var headers = new Headers();
+    return this.http.post('/cocteilDetail/idCocteil', {name: name}, {headers: headers})
+      .map(res=>res.json())
+      .catch((error:any) =>{return Observable.throw(error);})
   }
 
   allCocteil(){
@@ -53,13 +40,13 @@ export class CocteilService {
     return new Promise ((resolve, reject) => {
       this.http.get('/cocteilDetail/popCocteil')
       .map(res=>res.json())
-      .subscribe(res => { resolve (res.name_of_cocteil); }, (err) => {reject (err); });
+      .subscribe(res => { resolve (res); }, (err) => {reject (err); });
     });
   }
 
-  addLike(name, idUser){
+  addLike(idCocteil, idUser){
     var headers = new Headers();
-    return this.http.put('/cocteilDetail/addLike', {name: name, idUser: idUser}, {headers: headers})
+    return this.http.put('/cocteilDetail/addLike', {idCocteil: idCocteil, idUser: idUser}, {headers: headers})
       .map(res=>res.json())
       .catch((error:any) =>{return Observable.throw(error);})
   }

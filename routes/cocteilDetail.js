@@ -10,21 +10,29 @@ var bodyParser = require("body-parser");
 
 var jsonParser = bodyParser.json();
 
-router.post('/',jsonParser, function(req, res, next) {
-  var name = req.body.name;
-  db.query('SELECT name_of_cocteil, history_of_cocteil, like_of_cocteil, cockteils_preparation ' +
-    'FROM info_of_cocteils where name_of_cocteil= ? ', [name], function (err, rows) {
+router.post('/cocteil',jsonParser, function(req, res) {
+  var id = req.body.id;
+  db.query('SELECT * FROM info_of_cocteils where idCocteil= ? ', [id], function (err, rows) {
     if (err){
       res.json(err);
     }
-    res.json(rows[0]);
+    res.json(rows);
   });
-
 });
 
-router.post('/ingredients', jsonParser, function(req, res, next) {
+router.post('/ingredients', jsonParser, function(req, res) {
+  var id = req.body.id;
+  db.query('select volum, ingredient from cocteil_ingredients, ingredients where idIngredient = ingredients.idIngredients and idCocteil = ?', [id], function (err, rows) {
+    if (err){
+      res.json(err);
+    }
+    res.json(rows);
+  });
+});
+
+router.post('/idCocteil',jsonParser, function(req, res) {
   var name = req.body.name;
-  db.query('SELECT name_of_ingredient, volum FROM cocteil_ingredients where name_of_cocteil= ? ', [name], function (err, rows) {
+  db.query('SELECT idCocteil FROM info_of_cocteils where name_of_cocteil = ? ', [name], function (err, rows) {
     if (err){
       res.json(err);
     }
@@ -41,26 +49,25 @@ router.get('/all', function(req, res, next) {
   });
 });
 
-router.get('/popCocteil', function (req, res, next) {
-  db.query('SELECT name_of_cocteil from info_of_cocteils where like_of_cocteil= ' +
-    '(select max(like_of_cocteil) from info_of_cocteils)', function (err, rows) {
-    if (err) {
-      res.send(err);
-    }
-    res.json(rows[0]);
-  });
-});
-
-router.put('/addLike', jsonParser, function (req, res, next) {
-  var name = req.body.name;
-  var idUser = req.body.idUser;
-  db.query('update info_of_cocteils set like_of_cocteil=like_of_cocteil+1 where name_of_cocteil= ?', [name], function (err, rows) {
+router.get('/popCocteil', function (req, res) {
+  db.query('SELECT idCocteil from info_of_cocteils where like_of_cocteil = (select max(like_of_cocteil) from info_of_cocteils)', function (err, rows) {
     if (err) {
       res.send(err);
     }
     res.json(rows);
   });
-  db.query('insert into userlikecocteil (idUser, name_of_cocteil) value (?, ?)', [idUser, name]);
+});
+
+router.put('/addLike', jsonParser, function (req, res, next) {
+  var idCocteil = req.body.idCocteil;
+  var idUser = req.body.idUser;
+  db.query('update info_of_cocteils set like_of_cocteil=like_of_cocteil+1 where idCocteil= ?', [idCocteil], function (err, rows) {
+    if (err) {
+      res.send(err);
+    }
+    res.json(rows);
+  });
+  db.query('insert into userlikecocteil (idUser, idCocteil) value (?, ?)', [idUser, idCocteil]);
 });
 
 router.put('/addCocteil', jsonParser, function (req, res, next) {
@@ -76,9 +83,7 @@ router.put('/addCocteil', jsonParser, function (req, res, next) {
 });
 
 router.put('/addCocteilIngredients', jsonParser, function (req, res, next) {
-
   add(function (err,rows) {
-    console.log(rows);
     if (err) {
       res.send(err);
     }
@@ -104,7 +109,6 @@ router.put('/addCocteilIngredients', jsonParser, function (req, res, next) {
         rowsA = rows;
       });
     }
-    console.log(errA, rowsA);
     callback(errA, rowsA);
   }
 });
@@ -134,7 +138,7 @@ router.put('/addUser', jsonParser, function (req, res, next) {
 router.post('/searchUsersCocteil', jsonParser, function(req, res) {
   var idUser = req.body.idUser;
   var usersCocteil = [];
-  db.query('SELECT name_of_cocteil FROM userlikecocteil where idUser= ? ', [idUser], function (err, rows) {
+  db.query('SELECT name_of_cocteil FROM info_of_cocteils where idCocteil = (select idCocteil from userlikecocteil where idUser = ?)', [idUser], function (err, rows) {
     if (err){
       res.json(err);
     }
@@ -151,7 +155,5 @@ router.post('/searchUsersCocteil', jsonParser, function(req, res) {
     }
   });
 });
-
-
 
 module.exports = router;

@@ -34,23 +34,29 @@ export class CocteilDetailComponent implements OnInit{
   }
 
   ngOnInit(): void {
-
     this.route.paramMap
-      .switchMap((params: ParamMap) => this.cocteilService.searichCocteil(params.get('name')))
-      .subscribe(res => {
-        this.cocteil = res;
-        if (this.usersCocteil !== null) {
-          if (!this.searchCocteil()) {
-            this.imageLake = false;
-            this.imageLakeAdd = true;
-          }
+      .switchMap((params: ParamMap) => this.cocteilService.searichIdOfCocteil(params.get('name')))
+      .subscribe(res =>{
+        if (res[0] !== undefined) {
+            this.route.paramMap
+            .switchMap((params: ParamMap) => this.cocteilService.searichCocteil(res[0].idCocteil))
+            .subscribe(res => {
+              this.cocteil = res[0];
+              if (this.usersCocteil !== null) {
+                if (!this.searchCocteil()) {
+                  this.imageLake = false;
+                  this.imageLakeAdd = true;
+                }
+              }
+            });
+          this.route.paramMap
+            .switchMap((params: ParamMap) => this.cocteilService.searichIndred(res[0].idCocteil))
+            .subscribe(res => this.cocteilIngred = res);}
+        else if (res[0] == undefined) {
+          this.cocteilNotFaunded();
         }
-      }, err => this.cocteilNotFaunded());
-
-    this.route.paramMap
-      .switchMap((params: ParamMap) => this.cocteilService.searichIndred(params.get('name')))
-      .subscribe(res => this.cocteilIngred = res);
-
+      }
+      ), err => this.cocteilNotFaunded();
   }
 
   cocteilNotFaunded():void {
@@ -80,7 +86,7 @@ export class CocteilDetailComponent implements OnInit{
         this.usersCocteil.push(this.cocteil.name_of_cocteil);
         localStorage.setItem('usersCocteil', JSON.stringify(this.usersCocteil));
         this.usersCocteil = JSON.parse(localStorage.getItem('usersCocteil'));
-        this.cocteilService.addLike(this.cocteil.name_of_cocteil, this.currentIdUser)
+        this.cocteilService.addLike(this.cocteil.idCocteil, this.currentIdUser)
           .subscribe((res) => {
             this.cocteil.like_of_cocteil += 1
           }, (err) => {
