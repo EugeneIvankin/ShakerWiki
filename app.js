@@ -4,7 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 
-var cocteilDetail = require('./routes/cocteilDetail');
+var getCocteil = require('./routes/getCocteil');
+var setCocteil = require('./routes/setCocteil');
+var user = require('./routes/user');
 var app = express();
 
 app.use(logger('dev'));
@@ -15,7 +17,9 @@ app.use(bodyParser.urlencoded({'extended':'false'}));
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
 
-app.use('/cocteilDetail', cocteilDetail);
+app.use('/getCocteil', getCocteil);
+app.use('/setCocteil', setCocteil);
+app.use('/user', user);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

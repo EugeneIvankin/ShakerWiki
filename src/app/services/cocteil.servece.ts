@@ -10,7 +10,7 @@ export class CocteilService {
 
   searichCocteil(id){
     var headers = new Headers();
-    return this.http.post('/cocteilDetail/cocteil', {id: id}, {headers: headers})
+    return this.http.post('/getCocteil/cocteil', {id: id}, {headers: headers})
         .map(res=>res.json())
         .catch((error:any) =>{return Observable.throw(error);})
 
@@ -18,7 +18,7 @@ export class CocteilService {
 
   searichIndred(id){
     var headers = new Headers();
-    return this.http.post('/cocteilDetail/ingredients', {id: id}, {headers: headers})
+    return this.http.post('/getCocteil/ingredients', {id: id}, {headers: headers})
       .map(res=>res.json())
       .catch((error:any) =>{return Observable.throw(error);})
 
@@ -26,19 +26,19 @@ export class CocteilService {
 
   searichIdOfCocteil(name){
     var headers = new Headers();
-    return this.http.post('/cocteilDetail/idCocteil', {name: name}, {headers: headers})
+    return this.http.post('/getCocteil/idCocteil', {name: name}, {headers: headers})
       .map(res=>res.json())
       .catch((error:any) =>{return Observable.throw(error);})
   }
 
   allCocteil(){
-    return this.http.get('/cocteilDetail/all')
+    return this.http.get('/getCocteil/all')
       .map(res=>res.json());
   }
 
   popCocteil(){
     return new Promise ((resolve, reject) => {
-      this.http.get('/cocteilDetail/popCocteil')
+      this.http.get('/getCocteil/popCocteil')
       .map(res=>res.json())
       .subscribe(res => { resolve (res); }, (err) => {reject (err); });
     });
@@ -46,35 +46,35 @@ export class CocteilService {
 
   addLike(idCocteil, idUser){
     var headers = new Headers();
-    return this.http.put('/cocteilDetail/addLike', {idCocteil: idCocteil, idUser: idUser}, {headers: headers})
+    return this.http.put('/setCocteil/addLike', {idCocteil: idCocteil, idUser: idUser}, {headers: headers})
       .map(res=>res.json())
       .catch((error:any) =>{return Observable.throw(error);})
   }
 
   addCocteil(name, history, preparation){
     var headers = new Headers();
-    return this.http.put('/cocteilDetail/addCocteil', {name: name, history: history, preparation: preparation}, {headers: headers})
+    return this.http.put('/setCocteil/addCocteil', {name: name, history: history, preparation: preparation}, {headers: headers})
       .map(res=>res.json())
       .catch((error:any) =>{return Observable.throw(error);})
   }
 
   addCocteilIngredients(name, ingredients){
     var headers = new Headers();
-    return this.http.put('/cocteilDetail/addCocteilIngredients', {name: name, ingredients: ingredients}, {headers: headers})
+    return this.http.put('/setCocteil/addCocteilIngredients', {name: name, ingredients: ingredients}, {headers: headers})
       .map(res=>res.json())
       .catch((error:any) =>{return Observable.throw(error);})
   }
 
   searchUser(name, password){
     var headers = new Headers();
-    return this.http.post('/cocteilDetail/searchUser', {name: name, password: password}, {headers: headers})
+    return this.http.post('/user/searchUser', {name: name, password: password}, {headers: headers})
       .map(res=>res.json())
       .catch((error:any) =>{return Observable.throw(error);})
   }
 
   addUser(name, password){
     var headers = new Headers();
-    return this.http.put('/cocteilDetail/addUser', {name: name, password: password}, {headers: headers})
+    return this.http.put('/user/addUser', {name: name, password: password}, {headers: headers})
       .map(res=>res.json())
       .catch((error:any) =>{return Observable.throw(error);})
   }
@@ -82,7 +82,7 @@ export class CocteilService {
   searchUsersCocteil(idUser){
     return new Promise ((resolve, reject) => {
       var headers = new Headers();
-      this.http.post('/cocteilDetail/searchUsersCocteil',{idUser: idUser}, {headers: headers} )
+      this.http.post('/user/searchUsersCocteil',{idUser: idUser}, {headers: headers} )
         .map(res=>res.json())
         .subscribe(res => { resolve (res); }, (err) => {reject (err); });
     });

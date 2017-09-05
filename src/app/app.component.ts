@@ -56,8 +56,6 @@ export class AppComponent  {
                   (err) => {console.log(err);})
   }
 
-
-
   searchUserAnswer(res){
     if(res[0]==null){
       this.searchUserDefault();
