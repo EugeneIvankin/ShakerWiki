@@ -16,21 +16,25 @@ router.put('/addCocteil', function (req, res) {
 });
 
 router.put('/addCocteilIngredients', function (req, res) {
-  add(function (err,rows) {
-    answerFromServer.answer(req,res,err,rows);
+  var nameCocteil;
+  var ingredient;
+  var volum;
+
+  addIngredients(function (err,rows) {
+      answerFromServer.answer(req,res,err,rows);
   });
 
-  function add(callback) {
-    var nameCocteil;
-    var ingredient;
-    var volum;
+  //добавить просто ингридиенты
+
+  function addIngredients(callback) {
     var rowsA;
     var errA;
     for (var i=0; i<req.body.ingredients.length; i++){
       nameCocteil = req.body.name;
+      console.log(nameCocteil);
       ingredient = req.body.ingredients[i].name;
       volum = req.body.ingredients[i].volum;
-      routersSetCocteil.addCocteilIngredients(nameCocteil, ingredient, volum, function () {
+      routersSetCocteil.addCocteilIngredients(nameCocteil, ingredient, volum, function (err, rows) {
         if (err) {
           errA = err;
         }
@@ -39,6 +43,7 @@ router.put('/addCocteilIngredients', function (req, res) {
     }
     callback(errA, rowsA);
   }
+
 });
 
 module.exports = router;
