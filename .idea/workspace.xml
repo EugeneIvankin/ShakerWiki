@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8592d972-4a2f-4110-8b54-d9c91b407473" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/Б-52.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/Белый русский.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/ShakerWiki.mwb" afterPath="$PROJECT_DIR$/Database/ShakerWiki.mwb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/ShakerWiki.mwb.bak" afterPath="$PROJECT_DIR$/Database/ShakerWiki.mwb.bak" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/ShakerWiki.sql" afterPath="$PROJECT_DIR$/Database/ShakerWiki.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/routersSetCocteil.js" afterPath="$PROJECT_DIR$/routes/routersSetCocteil.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/setCocteil.js" afterPath="$PROJECT_DIR$/routes/setCocteil.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/addCocteil/addCocteil.html" afterPath="$PROJECT_DIR$/src/app/addCocteil/addCocteil.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/addCocteil/addCocteil.ts" afterPath="$PROJECT_DIR$/src/app/addCocteil/addCocteil.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles.css" afterPath="$PROJECT_DIR$/src/styles.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/images/1.jpg" afterPath="$PROJECT_DIR$/src/images/backgraund.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/cocteil.servece.ts" afterPath="$PROJECT_DIR$/src/app/services/cocteil.servece.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -35,21 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="setCocteil.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="setCocteil.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/setCocteil.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+            <state relative-caret-position="340">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addCocteil.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addCocteil.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/addCocteil/addCocteil.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="44" column="86" selection-start-line="44" selection-start-column="86" selection-end-line="44" selection-end-column="86" />
+            <state relative-caret-position="748">
+              <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -58,8 +50,8 @@
       <file leaf-file-name="addCocteil.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/addCocteil/addCocteil.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" column="82" selection-start-line="19" selection-start-column="82" selection-end-line="19" selection-end-column="82" />
+            <state relative-caret-position="748">
+              <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -68,8 +60,8 @@
       <file leaf-file-name="cocteil.servece.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/services/cocteil.servece.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+            <state relative-caret-position="157">
+              <caret line="55" column="132" selection-start-line="55" selection-start-column="132" selection-end-line="55" selection-end-column="132" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -147,13 +139,13 @@
         <option value="$PROJECT_DIR$/src/app/cocteil-dashboard/cocteil-dashboard.component.ts" />
         <option value="$PROJECT_DIR$/routes/routersGetCocteil.js" />
         <option value="$PROJECT_DIR$/routes/User.js" />
-        <option value="$PROJECT_DIR$/src/app/services/cocteil.servece.ts" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/answerFromServer.js" />
         <option value="$PROJECT_DIR$/routes/getCocteil.js" />
         <option value="$PROJECT_DIR$/routes/user.js" />
         <option value="$PROJECT_DIR$/src/app/addCocteil/addCocteil.html" />
         <option value="$PROJECT_DIR$/routes/routersSetCocteil.js" />
+        <option value="$PROJECT_DIR$/src/app/services/cocteil.servece.ts" />
         <option value="$PROJECT_DIR$/routes/setCocteil.js" />
         <option value="$PROJECT_DIR$/src/app/addCocteil/addCocteil.ts" />
       </list>
@@ -449,7 +441,7 @@
       <workItem from="1504249982443" duration="15792000" />
       <workItem from="1504512657421" duration="21085000" />
       <workItem from="1504593797190" duration="16234000" />
-      <workItem from="1504618373882" duration="2285000" />
+      <workItem from="1504618373882" duration="3850000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1502456431841</created>
@@ -738,11 +730,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504602158639</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="add">
+      <created>1504620681867</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1504620681867</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="528134000" />
+    <option name="totallyTimeSpent" value="529699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1088,6 +1087,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1113,28 +1113,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/cocteil.servece.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/addCocteil/addCocteil.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="82" selection-start-line="19" selection-start-column="82" selection-end-line="19" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/addCocteil/addCocteil.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="44" column="86" selection-start-line="44" selection-start-column="86" selection-end-line="44" selection-end-column="86" />
+        <state relative-caret-position="748">
+          <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1147,10 +1129,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/cocteil.servece.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="55" column="132" selection-start-line="55" selection-start-column="132" selection-end-line="55" selection-end-column="132" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/setCocteil.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/addCocteil/addCocteil.ts">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
-          <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+          <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
           <folding />
         </state>
       </provider>

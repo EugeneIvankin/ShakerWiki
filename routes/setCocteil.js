@@ -10,6 +10,10 @@ router.put('/addLike', function (req, res) {
 });
 
 router.put('/addCocteil', function (req, res) {
+  console.log(req.body.name);
+  console.log(req.body.history);
+  console.log(req.body.preparation);
+  console.log(req.body.ingredients);
    routersSetCocteil.addCocteil(req.body.name, req.body.history, req.body.preparation, function (err, rows) {
      answerFromServer.answer(req,res,err,rows);
   })

@@ -16,7 +16,6 @@ export class Ingredient{
   }
 }
 
-
 @Component({
   selector: 'addCocteil',
   templateUrl: 'addCocteil.html',
@@ -31,7 +30,6 @@ export class AddCocteil{
   comit: any;
   cocteilIngredient: Ingredient[]=[];
 
-
   constructor(
     private http: Http,
     private cocteilService: CocteilService,
@@ -39,10 +37,10 @@ export class AddCocteil{
   {}
 
   addCocteil(name: string, history: string, preparation: string):void {
-    this.cocteilService.addCocteil(name, history, preparation)
+    this.cocteilService.addCocteil(name, history, preparation, this.cocteilIngredient)
       .subscribe((res) => {this.addCocteilSucksesful()}, (err) => {console.log(err);})
-    this.cocteilService.addCocteilIngredients(name, this.cocteilIngredient)
-      .subscribe((res) => {this.addCocteilSucksesful()}, (err) => {console.log(err);})
+    /*this.cocteilService.addCocteilIngredients(name, this.cocteilIngredient)
+      .subscribe((res) => {this.addCocteilSucksesful()}, (err) => {console.log(err);})*/
 
   }
 
@@ -50,7 +48,6 @@ export class AddCocteil{
     this.cocteilIngredient.push(new Ingredient(ingredient, volum));
     console.log(this.cocteilIngredient);
   }
-
 
 addCocteilSucksesful(): void{
   let link = ['addedCocteil'];
