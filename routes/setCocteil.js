@@ -10,10 +10,6 @@ router.put('/addLike', function (req, res) {
 });
 
 router.put('/addCocteil', function (req, res) {
-  console.log(req.body.name);
-  console.log(req.body.history);
-  console.log(req.body.preparation);
-  console.log(req.body.ingredients);
    routersSetCocteil.addCocteil(req.body.name, req.body.history, req.body.preparation, function (err, rows) {
      answerFromServer.answer(req,res,err,rows);
   })
@@ -24,21 +20,18 @@ router.put('/addCocteilIngredients', function (req, res) {
   var ingredient;
   var volum;
 
-  addIngredients(function (err,rows) {
+  addIngredients(function (err, rows) {
+    addIngredientsVolum(function (err, rows) {
       answerFromServer.answer(req,res,err,rows);
+    })
   });
 
-  //добавить просто ингридиенты
-
   function addIngredients(callback) {
-    var rowsA;
-    var errA;
     for (var i=0; i<req.body.ingredients.length; i++){
-      nameCocteil = req.body.name;
-      console.log(nameCocteil);
+      var rowsA;
+      var errA;
       ingredient = req.body.ingredients[i].name;
-      volum = req.body.ingredients[i].volum;
-      routersSetCocteil.addCocteilIngredients(nameCocteil, ingredient, volum, function (err, rows) {
+      routersSetCocteil.addCocteilIngredients(ingredient, function (err, rows) {
         if (err) {
           errA = err;
         }
@@ -48,6 +41,22 @@ router.put('/addCocteilIngredients', function (req, res) {
     callback(errA, rowsA);
   }
 
+  function addIngredientsVolum(callback) {
+    var rowsA;
+    var errA;
+    for (var i=0; i<req.body.ingredients.length; i++){
+      nameCocteil = req.body.name;
+      ingredient = req.body.ingredients[i].name;
+      volum = req.body.ingredients[i].volum;
+      routersSetCocteil.addIngredientsVolum(nameCocteil, ingredient, volum, function (err, rows) {
+        if (err) {
+          errA = true;
+        }
+        rowsA = true;
+        callback(errA, rowsA);
+      })
+    }
+  }
 });
 
 module.exports = router;

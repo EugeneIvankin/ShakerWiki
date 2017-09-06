@@ -26,22 +26,19 @@ export class AddCocteil{
   cocteil: Cocteil = new Cocteil();
   cocteilIngred: CocteilIngred = new CocteilIngred();
   name: any;
-  preporation: string;
-  comit: any;
   cocteilIngredient: Ingredient[]=[];
 
   constructor(
-    private http: Http,
     private cocteilService: CocteilService,
     private router: Router)
   {}
 
   addCocteil(name: string, history: string, preparation: string):void {
-    this.cocteilService.addCocteil(name, history, preparation, this.cocteilIngredient)
-      .subscribe((res) => {this.addCocteilSucksesful()}, (err) => {console.log(err);})
-    /*this.cocteilService.addCocteilIngredients(name, this.cocteilIngredient)
-      .subscribe((res) => {this.addCocteilSucksesful()}, (err) => {console.log(err);})*/
-
+    this.cocteilService.addCocteil(name, history, preparation)
+      .subscribe((res) => {
+        this.cocteilService.addCocteilIngredients(name, this.cocteilIngredient)
+          .subscribe((res) => {this.addCocteilSucksesful()}, (err) => {console.log(err);})
+      }, (err) => {console.log(err);})
   }
 
   addCocteilIngredient(ingredient: string, volum: string): void {
