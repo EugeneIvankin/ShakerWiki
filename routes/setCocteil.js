@@ -20,28 +20,33 @@ router.put('/addCocteilIngredients', function (req, res) {
   var ingredient;
   var volum;
 
-  addIngredients(function (err, rows) {
-    addIngredientsVolum(function (err, rows) {
-      answerFromServer.answer(req,res,err,rows);
-    })
+  addIngredients(function (ans) {
+    if (ans){
+      console.log("Начал добавлять обьем");
+      addIngredientsVolum(function (err, rows) {
+        answerFromServer.answer(req,res,err,rows);
+      })
+    }
   });
 
   function addIngredients(callback) {
+    var ans;
+    console.log("Добавляю ингридиенты");
+
     for (var i=0; i<req.body.ingredients.length; i++){
-      var rowsA;
-      var errA;
       ingredient = req.body.ingredients[i].name;
-      routersSetCocteil.addCocteilIngredients(ingredient, function (err, rows) {
-        if (err) {
-          errA = err;
+      routersSetCocteil.checkIngredient(ingredient, function (rows) {
+        if (rows !== null){
+          routersSetCocteil.addCocteilIngredients(ingredient);
         }
-        rowsA = rows;
       })
     }
-    callback(errA, rowsA);
+    ans = true;
+    callback(ans);
   }
 
   function addIngredientsVolum(callback) {
+    console.log("Добавляю обьем");
     var rowsA;
     var errA;
     for (var i=0; i<req.body.ingredients.length; i++){

@@ -15,10 +15,14 @@ function addCocteil(name, history, preparation, callback) {
   });
 };
 
-function addCocteilIngredients(ingredient, callback) {
-  db.query('insert into ingredients (ingredient) value (?)', [ingredient], function (err, rows) {
-    callback(err, rows);
+function checkIngredient(ingredient, callback) {
+  db.query('SELECT idIngredients FROM ingredients where ingredient= ?', [ingredient], function (rows) {
+    callback(rows)
   });
+};
+
+function addCocteilIngredients(ingredient) {
+  db.query('insert into ingredients (ingredient) value (?)', [ingredient]);
 };
 
 
@@ -34,6 +38,7 @@ module.exports = {
   addLike: addLike,
   addCocteil: addCocteil,
   addCocteilIngredients: addCocteilIngredients,
-  addIngredientsVolum: addIngredientsVolum
+  addIngredientsVolum: addIngredientsVolum,
+  checkIngredient: checkIngredient
 };
 

@@ -37,7 +37,7 @@ export class AddCocteil{
     this.cocteilService.addCocteil(name, history, preparation)
       .subscribe((res) => {
         this.cocteilService.addCocteilIngredients(name, this.cocteilIngredient)
-          .subscribe((res) => {this.addCocteilSucksesful()}, (err) => {console.log(err);})
+          .subscribe((res) => {this.addCocteilSucksesful()}, (err) => {this.addCocteilSucksesful(); console.log("ошибка")})
       }, (err) => {console.log(err);})
   }
 
