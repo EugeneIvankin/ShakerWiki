@@ -1,17 +1,17 @@
 .nameDiv{
   width: auto;
   height: 6%;
-  margin-top: 0;
+  margin-top: 0%;
 }
 
 #infoOfCocteil{
-  height: auto;
+  height: 70%;
   width: auto;
   margin-top: 0%;
 }
 
-#historyDiv{
-  height: auto;
+#historyOutDiv{
+  height: 90%;
   width: 30%;
   margin-top: 0%;
   margin-left: 68.5%;
@@ -20,10 +20,22 @@
   opacity: 0.7;
   border-radius: 10px;
   padding: 10px;
+  overflow-y: auto;
+}
+
+#historyOutDiv:hover{
+  background: white;
+  opacity: 1;
+}
+
+#historyDiv{
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
 }
 
 #imageDiv{
-  height: 70vh;
+  height: auto;
   width: 38%;
   margin-top: 0%;
   margin-left: 0%;
@@ -39,6 +51,11 @@
   opacity: 0.7;
   border-radius: 10px;
   padding: 10px;
+}
+
+#preporationDiv:hover{
+  background: white;
+  opacity: 1;
 }
 
 #imageCocteilDiv{
@@ -60,4 +77,3 @@
   bottom: 0;
   display: block;
 }
-
