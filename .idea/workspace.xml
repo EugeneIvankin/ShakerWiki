@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8592d972-4a2f-4110-8b54-d9c91b407473" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/cocteil-detail/cocteil.component.css" afterPath="$PROJECT_DIR$/src/app/cocteil-detail/cocteil.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/cocteil-detail/cocteil.component.html" afterPath="$PROJECT_DIR$/src/app/cocteil-detail/cocteil.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/popCocteil/popCocteil.css" afterPath="$PROJECT_DIR$/src/app/popCocteil/popCocteil.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/popCocteil/popCocteil.html" afterPath="$PROJECT_DIR$/src/app/popCocteil/popCocteil.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.html" afterPath="$PROJECT_DIR$/src/app/app.component.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -62,7 +59,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/styles.css" />
         <option value="$PROJECT_DIR$/src/app/app.component.css" />
-        <option value="$PROJECT_DIR$/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/src/cocteil.ts" />
         <option value="$PROJECT_DIR$/src/cocteilIngred.ts" />
         <option value="$PROJECT_DIR$/src/app/routing/app-routing.module.ts" />
@@ -96,6 +92,7 @@
         <option value="$PROJECT_DIR$/src/app/cocteil-detail/cocteil.component.css" />
         <option value="$PROJECT_DIR$/src/app/popCocteil/popCocteil.html" />
         <option value="$PROJECT_DIR$/src/app/popCocteil/popCocteil.css" />
+        <option value="$PROJECT_DIR$/src/app/app.component.html" />
       </list>
     </option>
   </component>
@@ -301,7 +298,7 @@
       <workItem from="1504593797190" duration="16234000" />
       <workItem from="1504618373882" duration="3870000" />
       <workItem from="1504679087974" duration="21705000" />
-      <workItem from="1504770241311" duration="20182000" />
+      <workItem from="1504770241311" duration="20660000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1502456431841</created>
@@ -625,11 +622,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504793159584</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="add">
+      <created>1504794361905</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1504794361905</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="571606000" />
+    <option name="totallyTimeSpent" value="572084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -750,14 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
           <caret line="151" column="22" selection-start-line="151" selection-start-column="22" selection-end-line="151" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1046,6 +1042,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
           <folding />
         </state>
       </provider>

@@ -10,7 +10,7 @@
     <div id="battons">
 
       <div id="searechCocteil">
-        <input type="text" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel" required pattern="[а-яА-Я-0-9]{3,9}"
+        <input type="text" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel" required pattern="[а-яА-Я-0-9 -]{3,25}"
                placeholder="Название коктейля"/>
         <div id="searechCocteilBatton">
           <button class="CocteilBatton" [disabled]="cocteilName.invalid" (click)="searchCocteil(cocteilName.value);">
