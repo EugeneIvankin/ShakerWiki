@@ -5,13 +5,13 @@
 }
 
 #infoOfCocteil{
-  height: auto;
+  height: 70%;
   width: auto;
   margin-top: 0%;
 }
 
 #historyDiv{
-  height: auto;
+  height: 90%;
   width: 30%;
   margin-top: 0%;
   margin-left: 68.5%;
@@ -20,7 +20,14 @@
   opacity: 0.7;
   border-radius: 10px;
   padding: 10px;
+  overflow-y: auto;
 }
+
+#historyDiv:hover{
+  background: white;
+  opacity: 1;
+}
+
 
 #imageDiv{
   height: auto;
@@ -39,6 +46,11 @@
   opacity: 0.7;
   border-radius: 10px;
   padding: 10px;
+}
+
+#preporationDiv:hover{
+  background: white;
+  opacity: 1;
 }
 
 #imageCocteilDiv{

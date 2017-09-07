@@ -15,30 +15,21 @@ function addCocteil(name, history, preparation, callback) {
   });
 };
 
-function checkIngredient(ingredient, callback) {
-  db.query('SELECT idIngredients FROM ingredients where ingredient= ?', [ingredient], function (rows) {
-    callback(rows)
-  });
+function addIngredient(ingredient) {
+  db.query('insert ignore into ingredients set `ingredient` = ?', [ingredient]);
 };
 
-function addCocteilIngredients(ingredient) {
-  db.query('insert into ingredients (ingredient) value (?)', [ingredient]);
-};
-
-
-function addIngredientsVolum(nameCocteil, ingredient, volum, callback) {
+function addIngredientsVolum(nameCocteil, ingredient, volum) {
+  console.log("добавил обьем");
   db.query('insert into cocteil_ingredients (idCocteil, idIngredient, volum) values ' +
     '((select idCocteil from info_of_cocteils where name_of_cocteil= ?), ' +
-    '(select idIngredients from ingredients where ingredient= ?), ?)', [nameCocteil, ingredient, volum], function (err, rows) {
-    callback(err, rows);
-  });
+    '(select idIngredients from ingredients where ingredient= ?), ?)', [nameCocteil, ingredient, volum]);
 };
 
 module.exports = {
   addLike: addLike,
   addCocteil: addCocteil,
-  addCocteilIngredients: addCocteilIngredients,
   addIngredientsVolum: addIngredientsVolum,
-  checkIngredient: checkIngredient
+  addIngredient: addIngredient
 };
 

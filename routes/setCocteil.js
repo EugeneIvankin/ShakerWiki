@@ -20,48 +20,30 @@ router.put('/addCocteilIngredients', function (req, res) {
   var ingredient;
   var volum;
 
-  addIngredients(function (ans) {
-    if (ans){
-      console.log("Начал добавлять обьем");
-      addIngredientsVolum(function (err, rows) {
-        answerFromServer.answer(req,res,err,rows);
-      })
-    }
+  addIngredients(function () {
+    addIngredientsVolum(function () {
+      res.json(true);
+    });
   });
 
   function addIngredients(callback) {
-    var ans;
-    console.log("Добавляю ингридиенты");
-
     for (var i=0; i<req.body.ingredients.length; i++){
       ingredient = req.body.ingredients[i].name;
-      routersSetCocteil.checkIngredient(ingredient, function (rows) {
-        if (rows !== null){
-          routersSetCocteil.addCocteilIngredients(ingredient);
-        }
-      })
+      routersSetCocteil.addIngredient(ingredient);
     }
-    ans = true;
-    callback(ans);
+    callback();
   }
 
   function addIngredientsVolum(callback) {
-    console.log("Добавляю обьем");
-    var rowsA;
-    var errA;
     for (var i=0; i<req.body.ingredients.length; i++){
       nameCocteil = req.body.name;
       ingredient = req.body.ingredients[i].name;
       volum = req.body.ingredients[i].volum;
-      routersSetCocteil.addIngredientsVolum(nameCocteil, ingredient, volum, function (err, rows) {
-        if (err) {
-          errA = true;
-        }
-        rowsA = true;
-        callback(errA, rowsA);
-      })
+      routersSetCocteil.addIngredientsVolum(nameCocteil, ingredient, volum);
     }
+    callback();
   }
+
 });
 
 module.exports = router;
