@@ -11,7 +11,7 @@
 }
 
 #historyOutDiv{
-  height: 90%;
+  height: 100%;
   width: 30%;
   margin-top: 0%;
   margin-left: 68.5%;
@@ -35,16 +35,16 @@
 }
 
 #imageDiv{
-  height: auto;
-  width: 38%;
+  height: 100%;
+  width: 35%;
   margin-top: 0%;
   margin-left: 0%;
   float: left;
 }
 
-#preporationDiv{
-  height: auto;
-  width: 29%;
+#preporationOutDiv{
+  height: 100%;
+  width: 30%;
   margin-top: 0%;
   float: left;
   background: whitesmoke;
@@ -53,17 +53,23 @@
   padding: 10px;
 }
 
-#preporationDiv:hover{
+#preporationDiv{
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+#preporationOutDiv:hover{
   background: white;
   opacity: 1;
 }
 
 #imageCocteilDiv{
-  width: 37.5%;
+  width: 35%;
   height: 55%;
   text-align: center;
   position: absolute;
-  bottom: 17%;
+  bottom: 10%;
 }
 
 #image{

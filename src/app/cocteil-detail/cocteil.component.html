@@ -4,16 +4,16 @@
 
 <div id="infoOfCocteil">
 
-  <div id="preporationDiv">
+  <div id="preporationOutDiv">
+    <div id="preporationDiv">
+      <div *ngFor="let cocteil of cocteilIngred">
+        <p class="textForIngredient"> {{cocteil?.ingredient}} {{cocteil?.volum}} </p>
+      </div>
 
-    <div *ngFor="let cocteil of cocteilIngred">
-      <p class="textForIngredient"> {{cocteil?.ingredient}} {{cocteil?.volum}} </p>
+      <div>
+        <p class="textForCocteil"> {{cocteil?.cockteils_preparation}} </p>
+      </div>
     </div>
-
-    <div>
-      <p class="textForCocteil"> {{cocteil?.cockteils_preparation}} </p>
-    </div>
-
   </div>
 
   <div id="imageDiv">

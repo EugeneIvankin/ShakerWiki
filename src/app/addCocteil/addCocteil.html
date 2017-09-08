@@ -52,7 +52,7 @@
       <hr>
 
       <div id="addCocteilBatton">
-        <button class="CocteilBatton" [disabled]="cocteilName.invalid || cocteilPreparation.invalid"
+        <button class="CocteilBatton" [disabled]="cocteilName.invalid || cocteilPreparation.invalid || cocteilHistory.invalid"
                 (click)="addCocteil(cocteilName.value, cocteilHistory.value, cocteilPreparation.value);">
           <p class="textForBatton">Добавить коктейль</p>
         </button>

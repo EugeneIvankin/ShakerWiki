@@ -3,6 +3,16 @@
   height: 100vh;
 }
 
+hr {
+  margin-bottom: 0.5vh;
+}
+
+::-webkit-input-placeholder {
+  font-size: 2vh;
+  text-align: center;
+  vertical-align: middle;
+}
+
 .nameDiv{
   width: 20%;
   height: 5%;
@@ -44,7 +54,7 @@
   border-radius: 10px;
   resize: none;
   font-family: "Times New Roman";
-  font-size: 120%;
+  font-size: 2.5vh;
   text-align: center;
   float: right;
   line-height: 160%;
@@ -60,12 +70,13 @@
   border-radius: 10px;
   resize: none;
   font-family: "Times New Roman";
-  font-size: 120%;
+  font-size: 2.5vh;
   text-align: center;
   float: right;
   outline: none;
   padding: 0;
   line-height: 160%;
+  overflow: hidden;
 }
 
 .addCocteilIngredient:focus{
@@ -120,7 +131,7 @@
   opacity: 0.7;
   text-align: center;
   font-family: "Times New Roman";
-  font-size: 120%;
+  font-size: 2.5vh;
 }
 
 .ingredientInput:focus {
@@ -194,8 +205,8 @@
 }
 
 #message {
-  height: 2.5%;
-  width: auto;
+  height: 3vh;
+  width: 100%;
 }
 
 #messageText {
@@ -204,7 +215,7 @@
   background-color: black;
   color: white;
   text-align: center;
-  font-size: 120%;
+  font-size: 2.5vh;
   margin: 0;
 }
 

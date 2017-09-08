@@ -21,17 +21,13 @@
 
       <div id="allCocteilBatton">
         <button class="CocteilBatton" routerLink="/dashboard" routerLinkActive="active">
-          <div class="arealForTextBotton">
             <p class="textForBatton">Все коктейли</p>
-          </div>
         </button>
       </div>
 
       <div id="popCocteilBatton">
         <button class="CocteilBatton"  (click)="popCocteil();">
-          <div class="arealForTextBotton">
             <p class="textForBatton">Самый лучший</p>
-          </div>
         </button>
       </div>
 
@@ -41,14 +37,14 @@
         </button>
       </div>
 
-      <div id="addCocteil">
-        <button *ngIf="addCocteilBatton" class="CocteilBatton" routerLink="/addCocteil" routerLinkActive="active">
+      <div id="addCocteil" *ngIf="addCocteilBatton">
+        <button class="CocteilBatton" routerLink="/addCocteil" routerLinkActive="active">
           <p class="textForBatton">Добавить коктейль</p>
         </button>
       </div>
 
-      <div id="logOutDiv">
-        <button *ngIf="addCocteilBatton" class="CocteilBatton" (click)="logOut();">
+      <div id="logOutDiv" *ngIf="addCocteilBatton">
+        <button class="CocteilBatton" (click)="logOut();">
           <p class="textForBatton">Выход</p>
         </button>
       </div>

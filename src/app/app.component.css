@@ -10,7 +10,7 @@
 }
 
 #logo{
-  font-size: 300%;
+  font-size: 5vh;
   color: whitesmoke;
   font-family: Algerian;
   text-align: center;
@@ -81,6 +81,7 @@
 }
 
 #addCocteil{
+  height: 100%;
   width: 15%;
   margin-left: 1%;
   float: left;
@@ -89,6 +90,8 @@
 
 h1{
   text-align: center;
+  font-family: "Times New Roman";
+  font-size: 3vh;
 }
 
 #inputDiv{
@@ -131,12 +134,19 @@ h1{
   border-radius: 10px;
   resize: none;
   font-family: "Times New Roman";
-  font-size: 120%;
+  font-size: 2vh;
   text-align: center;
   float: none;
   outline: none;
   padding: 0;
   line-height: 160%;
+  overflow: hidden;
+}
+
+::-webkit-input-placeholder {
+  font-size: 2vh;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .userRegistrationInput:focus{
@@ -199,6 +209,7 @@ h1{
 }
 
 #favoriteCocteils{
+  height: 100%;
   width: 15%;
   margin-left: 1%;
   float: left;

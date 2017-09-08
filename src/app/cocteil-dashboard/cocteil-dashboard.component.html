@@ -1,7 +1,7 @@
 <div id="allCocteil">
 
 
-    <div *ngFor="let cocteils of allCocteils"  [routerLink]="['/detail', cocteils?.name_of_cocteil]">
+    <div  *ngFor="let cocteils of allCocteils"  [routerLink]="['/detail', cocteils?.name_of_cocteil]">
 
       <div id="smallView">
         <div *ngIf="cocteils?.name_of_cocteil" id="smallIcon">

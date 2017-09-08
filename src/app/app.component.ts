@@ -88,6 +88,7 @@ export class AppComponent  {
     this.addCocteilBatton = false;
     this.registrationBatton = true;
     localStorage.clear();
+    this.homePage();
     location.reload();
   }
 
