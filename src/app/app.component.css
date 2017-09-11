@@ -164,7 +164,7 @@ h1{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  cursor: hand;
+  cursor: pointer;
 }
 
 .userLoginBatton{
@@ -177,7 +177,7 @@ h1{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  cursor: hand;
+  cursor: pointer;
 }
 
 .userRegistrationBatton:focus{

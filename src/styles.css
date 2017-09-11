@@ -61,7 +61,7 @@ body{
 }
 
 #wineglass{
-  width: 10%;
+  width: 20%;
   height: 100%;
   float: right;
 }
@@ -109,7 +109,7 @@ body{
   display:none;
   width: auto;
   height: auto;
-  margin-top: 6vh;
+  margin-top: 5vh;
   background: whitesmoke;
   float: right;
 }
@@ -124,13 +124,15 @@ body{
   background: saddlebrown;
 }
 
-#like:hover .commentForLike{
+#wineglass:hover ~ .commentForLike{
   display:block;
 }
 
 #like{
-  width: auto;
-  height: 10%;
+  width: 30%;
+  height: 11%;
+  float: right;
+  margin-right: 4%;
 }
 
 .CocteilBatton {
