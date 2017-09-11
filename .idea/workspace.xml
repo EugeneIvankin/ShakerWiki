@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8592d972-4a2f-4110-8b54-d9c91b407473" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.css" afterPath="$PROJECT_DIR$/src/app/app.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/cocteil-dashboard/cocteil-dashboard.component.css" afterPath="$PROJECT_DIR$/src/app/cocteil-dashboard/cocteil-dashboard.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/cocteil-dashboard/cocteil-dashboard.component.html" afterPath="$PROJECT_DIR$/src/app/cocteil-dashboard/cocteil-dashboard.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/cocteil-dashboard/cocteil-dashboard.component.ts" afterPath="$PROJECT_DIR$/src/app/cocteil-dashboard/cocteil-dashboard.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/cocteil-detail/cocteil.component.css" afterPath="$PROJECT_DIR$/src/app/cocteil-detail/cocteil.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/popCocteil/popCocteil.css" afterPath="$PROJECT_DIR$/src/app/popCocteil/popCocteil.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles.css" afterPath="$PROJECT_DIR$/src/styles.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -44,8 +37,8 @@
       <file leaf-file-name="cocteil-dashboard.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/cocteil-dashboard/cocteil-dashboard.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+            <state relative-caret-position="799">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -382,14 +375,7 @@
       <workItem from="1504770241311" duration="21272000" />
       <workItem from="1504855870898" duration="20566000" />
       <workItem from="1504882692469" duration="216000" />
-      <workItem from="1505112644031" duration="19205000" />
-    </task>
-    <task id="LOCAL-00003" summary="add">
-      <created>1502456679308</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1502456679308</updated>
+      <workItem from="1505112644031" duration="19830000" />
     </task>
     <task id="LOCAL-00004" summary="add">
       <created>1502456729045</created>
@@ -727,11 +713,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504882797861</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="add">
+      <created>1505136883418</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1505136883418</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="612683000" />
+    <option name="totallyTimeSpent" value="613308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1154,8 +1147,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/cocteil-dashboard/cocteil-dashboard.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        <state relative-caret-position="799">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>
