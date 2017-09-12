@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8592d972-4a2f-4110-8b54-d9c91b407473" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/databaseConnection.js" afterPath="$PROJECT_DIR$/bin/databaseConnection.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -48,8 +47,8 @@
       <file leaf-file-name="databaseConnection.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/databaseConnection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="323">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -376,14 +375,7 @@
       <workItem from="1505139939187" duration="21000" />
       <workItem from="1505198655462" duration="655000" />
       <workItem from="1505200592216" duration="4106000" />
-      <workItem from="1505209902203" duration="5631000" />
-    </task>
-    <task id="LOCAL-00017" summary="add">
-      <created>1503673501811</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1503673501811</updated>
+      <workItem from="1505209902203" duration="6246000" />
     </task>
     <task id="LOCAL-00018" summary="add">
       <created>1503933222086</created>
@@ -721,11 +713,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505218266207</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="add">
+      <created>1505220608578</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1505220608578</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="623797000" />
+    <option name="totallyTimeSpent" value="624412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1135,8 +1134,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/databaseConnection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="323">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
