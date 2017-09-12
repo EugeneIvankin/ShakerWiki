@@ -48,8 +48,8 @@
       <file leaf-file-name="databaseConnection.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/databaseConnection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -376,14 +376,7 @@
       <workItem from="1505139939187" duration="21000" />
       <workItem from="1505198655462" duration="655000" />
       <workItem from="1505200592216" duration="4106000" />
-      <workItem from="1505209902203" duration="4456000" />
-    </task>
-    <task id="LOCAL-00015" summary="add">
-      <created>1503502261773</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1503502261773</updated>
+      <workItem from="1505209902203" duration="4992000" />
     </task>
     <task id="LOCAL-00016" summary="add">
       <created>1503585264453</created>
@@ -721,11 +714,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505215449937</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="add">
+      <created>1505217728833</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1505217728833</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="622622000" />
+    <option name="totallyTimeSpent" value="623158000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1135,8 +1135,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/databaseConnection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding />
         </state>
       </provider>
