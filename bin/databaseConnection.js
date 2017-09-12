@@ -9,10 +9,10 @@ var mysql = require('mysql');
 });*/
 
 var client = mysql.createConnection({
-  host: 'node47245-swiki.mycloud.by',
+  host: 'node47277-swiki.mycloud.by ',
   port: '3306',
   user: 'root',
-  password: 'NORzlp41114',
+  password: 'OVOxoa69018',
   database: 'shakerwiki'
 });
 
