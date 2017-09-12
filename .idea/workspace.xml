@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8592d972-4a2f-4110-8b54-d9c91b407473" name="Default" comment="add">
+    <list default="true" id="8592d972-4a2f-4110-8b54-d9c91b407473" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/heroku.cmd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kOKT.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kok_24_ShTUK.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/~$kOKT.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/~$k_24_ShTUK.docx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
@@ -68,8 +73,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+            <state relative-caret-position="454">
+              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -356,14 +361,7 @@
       <workItem from="1505139939187" duration="21000" />
       <workItem from="1505198655462" duration="655000" />
       <workItem from="1505200592216" duration="4106000" />
-      <workItem from="1505209902203" duration="57000" />
-    </task>
-    <task id="LOCAL-00009" summary="add">
-      <created>1502810467437</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1502810467437</updated>
+      <workItem from="1505209902203" duration="972000" />
     </task>
     <task id="LOCAL-00010" summary="add">
       <created>1502896341009</created>
@@ -701,11 +699,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505206114024</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="add">
+      <created>1505209966234</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1505209966234</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="618223000" />
+    <option name="totallyTimeSpent" value="619138000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1684" height="1026" extended-state="0" />
@@ -1113,8 +1118,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        <state relative-caret-position="454">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
           <folding />
         </state>
       </provider>
