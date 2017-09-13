@@ -29,20 +29,20 @@
 #smallIcon{
   height: 80%;
   width: auto;
-  margin-top: 5%;
+  margin-top: 4%;
 }
 
 #smallViewName{
   width: auto;
   height: auto;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 p {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
