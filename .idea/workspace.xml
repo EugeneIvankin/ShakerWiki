@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8592d972-4a2f-4110-8b54-d9c91b407473" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/inline.34e8958a5c3d8bf66e69.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/main.4129b5e1b1e679109ed4.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/polyfills.89925708c30abd4deb53.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/vendor.1cfea6c4285278f3c221.bundle.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/favoriteCocteils/favoriteCocteils.html" afterPath="$PROJECT_DIR$/src/app/favoriteCocteils/favoriteCocteils.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/favoriteCocteils/favoriteCocteils.ts" afterPath="$PROJECT_DIR$/src/app/favoriteCocteils/favoriteCocteils.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -397,14 +390,7 @@
       <workItem from="1505209902203" duration="6266000" />
       <workItem from="1505227078514" duration="777000" />
       <workItem from="1505285191374" duration="4434000" />
-      <workItem from="1505380918680" duration="3458000" />
-    </task>
-    <task id="LOCAL-00026" summary="add">
-      <created>1504175182777</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1504175182777</updated>
+      <workItem from="1505380918680" duration="3764000" />
     </task>
     <task id="LOCAL-00027" summary="add">
       <created>1504175677207</created>
@@ -742,11 +728,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505391767381</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="add">
+      <created>1505392658766</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1505392658766</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="633101000" />
+    <option name="totallyTimeSpent" value="633407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
