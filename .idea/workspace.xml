@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8592d972-4a2f-4110-8b54-d9c91b407473" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/userRouters.js" afterPath="$PROJECT_DIR$/routes/userRouters.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -427,6 +428,32 @@
       <workItem from="1505227078514" duration="777000" />
       <workItem from="1505285191374" duration="4434000" />
       <workItem from="1505380918680" duration="8499000" />
+<<<<<<< HEAD
+      <workItem from="1505380918680" duration="7563000" />
+    </task>
+    <task id="LOCAL-00031" summary="add">
+      <created>1504177752100</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1504177752100</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add">
+      <created>1504177888437</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1504177888437</updated>
+=======
+      <workItem from="1505380918680" duration="8323000" />
+>>>>>>> 3d6e109a48e1075eae27f93bc2f4e88644d469a4
+    </task>
+    <task id="LOCAL-00033" summary="add">
+      <created>1504178329472</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1504178329472</updated>
     </task>
     <task id="LOCAL-00034" summary="add">
       <created>1504178515356</created>
@@ -750,6 +777,13 @@
       <option name="project" value="LOCAL" />
       <updated>1505396669373</updated>
     </task>
+<<<<<<< HEAD
+    <option name="localTasksCounter" value="80" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="637206000" />
+=======
     <task id="LOCAL-00080" summary="add">
       <created>1505397194780</created>
       <option name="number" value="00080" />
@@ -776,6 +810,8 @@
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="638142000" />
+    <option name="totallyTimeSpent" value="637966000" />
+>>>>>>> 3d6e109a48e1075eae27f93bc2f4e88644d469a4
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1198,8 +1234,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/userRouters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
           <folding />
         </state>
       </provider>
