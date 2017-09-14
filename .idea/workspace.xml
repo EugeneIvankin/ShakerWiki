@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8592d972-4a2f-4110-8b54-d9c91b407473" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/favoriteCocteils/favoriteCocteils.ts" afterPath="$PROJECT_DIR$/src/app/favoriteCocteils/favoriteCocteils.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -39,8 +37,8 @@
       <file leaf-file-name="favoriteCocteils.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/favoriteCocteils/favoriteCocteils.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="391">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -392,14 +390,7 @@
       <workItem from="1505209902203" duration="6266000" />
       <workItem from="1505227078514" duration="777000" />
       <workItem from="1505285191374" duration="4434000" />
-      <workItem from="1505380918680" duration="1967000" />
-    </task>
-    <task id="LOCAL-00024" summary="add">
-      <created>1504172487941</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1504172487941</updated>
+      <workItem from="1505380918680" duration="2575000" />
     </task>
     <task id="LOCAL-00025" summary="add">
       <created>1504172896180</created>
@@ -737,11 +728,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505380942656</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="add">
+      <created>1505390123756</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1505390123756</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="631610000" />
+    <option name="totallyTimeSpent" value="632218000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1160,8 +1158,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/favoriteCocteils/favoriteCocteils.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
