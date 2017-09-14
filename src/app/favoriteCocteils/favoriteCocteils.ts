@@ -15,13 +15,12 @@ import {CocteilService} from "../services/cocteil.servece";
 export class FavoriteCocteils implements OnInit{
 
   usersCocteils = JSON.parse(localStorage.getItem('usersCocteil'));
-  usersCocteilsIsEmpty = true;
+  userCocteilsIsEmpty = true;
 
   ngOnInit(): void {
-    if (this.usersCocteils.length !== 0){
-      console.log(this.usersCocteils.length);
-      this.usersCocteilsIsEmpty = false;
+    console.log(this.userCocteilsIsEmpty);
+    if (this.usersCocteils.length == undefined){
+      this.userCocteilsIsEmpty = false;
     }
   }
-
 }
