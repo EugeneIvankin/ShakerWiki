@@ -17,13 +17,11 @@ export class FavoriteCocteils implements OnInit{
   usersCocteils = JSON.parse(localStorage.getItem('usersCocteil'));
   usersCocteilsIsEmpty = false;
 
-
   ngOnInit(): void {
     if (this.usersCocteils.length == 0){
+      console.log(this.usersCocteils.length);
       this.usersCocteilsIsEmpty = true;
     }
   }
-
-
 
 }
