@@ -15,7 +15,7 @@ function setUser(name, password, callback) {
 
 function getUserCocteils(idUser, callback) {
   db.query('SELECT name_of_cocteil FROM info_of_cocteils where idCocteil = ' +
-    '(select idCocteil from userLikeCocteil where idUser = ?)', [idUser], function (err, rows) {
+    '(select idCocteil from user where idUser = ?)', [idUser], function (err, rows) {
     callback(err, rows);
   });
 };
