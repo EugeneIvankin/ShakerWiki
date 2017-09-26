@@ -23,6 +23,7 @@ export class AppComponent  {
   registrationBatton = true;
   messageFromShowDialog: string;
   private usersCocteil = [];
+  visibility: boolean = true;
 
   constructor(
     private cocteilService: CocteilService,
@@ -48,6 +49,10 @@ export class AppComponent  {
   popCocteil():void {
     let link = [''];
     this.router.navigate(link);
+  }
+
+  topPage(){
+    window.scrollTo(0,0);
   }
 
   searchUser(name:string, password:string):void{
@@ -82,6 +87,11 @@ export class AppComponent  {
 
   searchUserDefault(){
     this.messageFromShowDialog = "Пользователь не найден";
+  }
+
+  openNavPanel(){
+    this.visibility=!this.visibility;
+
   }
 
   logOut(){

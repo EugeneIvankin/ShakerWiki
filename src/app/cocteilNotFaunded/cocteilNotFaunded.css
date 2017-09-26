@@ -1,17 +1,37 @@
 h1 {
   color: whitesmoke;
-  margin: 0;
-}
-
-#cocteilNotFound{
-  width: auto;
-  height: 5%;
   text-align: center;
 }
 
-#cocteilNotFoundBatton{
-  height: 3%;
-  width: auto;
+.cocteilNotFoundBatton{
+  width: 20%;
+  height: auto;
+  margin-right: 19vw;
   float: right;
-  margin-right: 25%;
+
+  border-radius: 5vh;
+  opacity: .7;
+}
+
+.cocteilNotFoundBatton:hover{
+  opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+
+  h1{
+    padding-top: 20vh;
+    margin: 0;
+    color: #2d2d2d;
+  }
+
+  .cocteilNotFoundBatton{
+    border-radius: 0;
+    opacity: 1;
+    padding: 1vh;
+    width: 50%;
+    margin: 11vh auto;
+    float: none;
+    background-color: white;
+  }
 }

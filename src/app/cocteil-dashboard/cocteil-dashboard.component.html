@@ -1,22 +1,16 @@
-<div id="dashboard">
-  <div id="allCocteil">
-      <div  *ngFor="let cocteils of showCocteils"  [routerLink]="['/detail', cocteils?.name_of_cocteil]">
-        <div id="smallView">
-          <div *ngIf="cocteils?.name_of_cocteil" id="smallIcon">
-            <img id="image" src="../../images/{{cocteils?.name_of_cocteil}}.png" onError="this.src='../../images/Американо.png'">
-          </div>
-          <div id="smallViewName">
-            <p>{{cocteils?.name_of_cocteil}}</p>
-          </div>
-        </div>
-      </div>
+<figure>
+
+  <div class="allCocteil">
+    <figure class="smallView" *ngFor="let cocteils of showCocteils"  [routerLink]="['/detail', cocteils?.name_of_cocteil]" (click)="topPage();">
+      <img *ngIf="cocteils?.name_of_cocteil" src="../../images/{{cocteils?.name_of_cocteil}}.png" onError="this.src='../../images/Американо.png'">
+      <figcaption>{{cocteils?.name_of_cocteil}}</figcaption>
+    </figure>
   </div>
 
-  <div id="navigationDiv">
-    <div id="battonsDiv">
-      <div class="button"  *ngFor="let number of numbers" (click)="getShowCocteils(number)">
-        <p>{{number}}</p>
-      </div>
+  <div class="navigationDiv">
+    <div class="button">
+        <p *ngFor="let number of numbers" (click)="getShowCocteils(number)" (click)="topPage();">{{number}}</p>
     </div>
   </div>
-</div>
+
+</figure>

@@ -1,58 +1,35 @@
-<div class="nameDiv">
+<header>
   <h1 class="nameCocteil">{{cocteil?.name_of_cocteil}}</h1>
-</div>
+</header>
 
-<div id="infoOfCocteil">
+<main>
 
-  <div id="preporationOutDiv">
-    <div id="preporationDiv">
-      <div *ngFor="let cocteil of cocteilIngred">
-        <p class="textForIngredient"> {{cocteil?.ingredient}} {{cocteil?.volum}} </p>
-      </div>
+  <figure>
 
-      <div>
-        <p class="textForCocteil"> {{cocteil?.cockteils_preparation}} </p>
-      </div>
+    <div *ngIf="imageLike" class="like" >
+      <p class="textForLike" (click)="addLike()"> {{cocteil?.like_of_cocteil}} </p>
+    </div>
+
+    <p class="comment">Нравится</p>
+
+    <img *ngIf="cocteil?.name_of_cocteil" src="../../images/{{cocteil?.name_of_cocteil}}.png">
+
+  </figure>
+
+  <div class="preporationOutDiv">
+    <div class="preporationDiv">
+      <p *ngFor="let cocteil of cocteilIngred" class="textForIngredient"> {{cocteil?.ingredient}} {{cocteil?.volum}} </p>
+      <p class="textForCocteil"> {{cocteil?.cockteils_preparation}} </p>
     </div>
   </div>
 
-  <div id="imageDiv">
-
-    <div id="like">
-      <div id="wineglass">
-
-        <div *ngIf="imageLake" id="triangle" >
-          <div class="textAtLike">
-            <p class="textForLike" (click)="addLike()"> {{cocteil?.like_of_cocteil}} </p>
-          </div>
-        </div>
-        <div *ngIf="imageLakeAdd" id="triangleAdd" >
-          <div class="textAtLike">
-            <p class="textForLikeAdd" (click)="addLike()"> {{cocteil?.like_of_cocteil}} </p>
-          </div>
-        </div>
-        <div id="rectanglVerticale"></div>
-        <div id="rectanglHorizontal"></div>
-
-      </div>
-
-      <div class="commentForLike">
-        <p id="comment">Нравится</p>
-      </div>
-    </div>
-
-    <div *ngIf="cocteil?.name_of_cocteil" id="imageCocteilDiv">
-      <img id="image" src="../../images/{{cocteil?.name_of_cocteil}}.png">
-    </div>
-
-  </div>
-
-  <div id="historyOutDiv">
-    <div id="historyDiv">
+  <div class="historyOutDiv">
+    <div class="historyDiv">
       <p class="textForCocteil">
         {{cocteil?.history_of_cocteil}}
       </p>
     </div>
   </div>
 
-</div>
+</main>
+

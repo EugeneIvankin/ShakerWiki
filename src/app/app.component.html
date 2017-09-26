@@ -1,72 +1,55 @@
-<div id="table">
+  <header>
+    <div class="navigationBatton" (click)="openNavPanel();">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <h1 class="logo" (click)="homePage();">ShakerWiki</h1>
+  </header>
 
-  <div id="logoConteiner">
-    <h1 id="logo" (click)="homePage();">ShakerWiki</h1>
-  </div>
 
-  <hr>
+  <nav [ngClass]="{nav: visibility}">
+      <div class="searechCocteil">
 
-  <div id="navigationDiv">
-    <div id="battons">
-
-      <div id="searechCocteil">
-        <input type="text" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel" required pattern="[а-яА-Я-0-9 -]{3,25}"
+        <input class="searechCocteilInput" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel" required pattern="[а-яА-Я-0-9 -]{3,25}"
                placeholder="Название коктейля"/>
-        <div id="searechCocteilBatton">
-          <button class="CocteilBatton" [disabled]="cocteilName.invalid" (click)="searchCocteil(cocteilName.value);">
+
+          <button class="searechCocteilBatton" [disabled]="cocteilName.invalid" (click)="searchCocteil(cocteilName.value);" (click)="openNavPanel();">
             <p class="textForBatton">Найти</p>
           </button>
-        </div>
+
       </div>
 
-      <div id="allCocteilBatton">
-        <button class="CocteilBatton" routerLink="/dashboard" routerLinkActive="active">
+      <div class="leftBatton" routerLink="/dashboard" routerLinkActive="active" (click)="openNavPanel();">
             <p class="textForBatton">Все коктейли</p>
-        </button>
       </div>
 
-      <div id="popCocteilBatton">
-        <button class="CocteilBatton"  (click)="popCocteil();">
+      <div class="leftBatton" (click)="popCocteil();" (click)="openNavPanel();" (click)="topPage();">
             <p class="textForBatton">Самый лучший</p>
-        </button>
       </div>
 
-      <div id="favoriteCocteils">
-        <button *ngIf="addCocteilBatton" class="CocteilBatton" routerLink="/favoriteCocteils" routerLinkActive="active">
+      <div class="leftBatton" *ngIf="addCocteilBatton" class="CocteilBatton" routerLink="/favoriteCocteils" routerLinkActive="active">
           <p class="textForBatton">Любимые</p>
-        </button>
       </div>
 
-      <div id="addCocteil" *ngIf="addCocteilBatton">
-        <button class="CocteilBatton" routerLink="/addCocteil" routerLinkActive="active">
+      <div class="leftBatton" *ngIf="addCocteilBatton" routerLink="/addCocteil" routerLinkActive="active">
           <p class="textForBatton">Добавить коктейль</p>
-        </button>
       </div>
 
-      <div id="logOutDiv" *ngIf="addCocteilBatton">
-        <button class="CocteilBatton" (click)="logOut();">
+      <div class="rightBatton" *ngIf="addCocteilBatton" (click)="logOut();">
           <p class="textForBatton">Выход</p>
-        </button>
       </div>
 
-      <div id="registation" *ngIf="registrationBatton">
-        <button  class="CocteilBatton" (click)="showDialog = !showDialog">
+      <div class="rightBatton" *ngIf="registrationBatton" (click)="showDialog = !showDialog" (click)="openNavPanel();">
           <p class="textForBatton">Регистрация/Вход</p>
-        </button>
       </div>
-    </div>
+  </nav>
 
-    <hr>
+  <router-outlet></router-outlet>
 
-  </div>
-
-
-<router-outlet></router-outlet>
-
-</div>
 
 <registration [(visible)]="showDialog">
-  <h1>Добро пожаловать!</h1>
+  <!--<h1>Добро пожаловать!</h1>
   <hr>
   <div id="inputDiv">
 
@@ -103,6 +86,6 @@
     </div>
 
   </div>
-
+-->
 </registration>
 

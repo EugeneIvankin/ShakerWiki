@@ -25,6 +25,10 @@ export class CocteilDashboard implements OnInit{
       .subscribe((res) => {this.allCocteils = res; this.getNumbers(res.length/6); this.getShowCocteils(1)});
   }
 
+  topPage(){
+    window.scrollTo(0,0);
+  }
+
   getShowCocteils(num: number): void {
     this.paigeOfCocteils = num;
     if (this.showCocteils.length !==0 ){

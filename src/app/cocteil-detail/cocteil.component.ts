@@ -20,8 +20,8 @@ export class CocteilDetailComponent implements OnInit{
   cocteilIngred: CocteilIngred;
   currentIdUser: number;
   usersCocteil = [];
-  imageLake = true;
-  imageLakeAdd = false;
+  imageLike = true;
+  imageLikeAdd = false;
 
   constructor(
     private cocteilService: CocteilService,
@@ -44,8 +44,8 @@ export class CocteilDetailComponent implements OnInit{
               this.cocteil = res[0];
               if (this.usersCocteil !== null) {
                 if (!this.searchCocteil()) {
-                  this.imageLake = false;
-                  this.imageLakeAdd = true;
+                  this.imageLike = false;
+                  this.imageLikeAdd = true;
                 }
               }
             });
@@ -81,8 +81,8 @@ export class CocteilDetailComponent implements OnInit{
   addLike():void {
     if (this.currentIdUser !== null) {
       if (this.searchCocteil()) {
-        this.imageLake = false;
-        this.imageLakeAdd = true;
+        this.imageLike = false;
+        this.imageLikeAdd = true;
         this.usersCocteil.push(this.cocteil.name_of_cocteil);
         localStorage.setItem('usersCocteil', JSON.stringify(this.usersCocteil));
         this.usersCocteil = JSON.parse(localStorage.getItem('usersCocteil'));
