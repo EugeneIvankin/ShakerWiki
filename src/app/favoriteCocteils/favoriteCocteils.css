@@ -58,7 +58,9 @@ figcaption{
 
   h1{
     color: #2d2d2d;
-    padding-top: 20vh;
+    padding-top: 5vh;
+    margin-left: 13vw;
+    width: 50vw;
   }
 
   .allCocteil {

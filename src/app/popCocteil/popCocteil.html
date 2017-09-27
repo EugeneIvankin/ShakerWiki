@@ -6,8 +6,9 @@
 
   <figure>
 
-    <div *ngIf="imageLike" class="like" >
-      <p class="textForLike" (click)="addLike()"> {{cocteil?.like_of_cocteil}} </p>
+    <div class="like" >
+      <p class="textForLike" *ngIf="imageLike" (click)="addLike()"> {{cocteil?.like_of_cocteil}} </p>
+      <p class="textForLike" *ngIf="imageLikeAdd"> {{cocteil?.like_of_cocteil}} </p>
     </div>
 
     <p class="comment">Нравится</p>

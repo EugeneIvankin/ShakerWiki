@@ -14,7 +14,7 @@
         <input [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel" required pattern="[а-яА-Я-0-9 -]{3,25}"
                placeholder="Название коктейля"/>
 
-          <button [disabled]="cocteilName.invalid" (click)="searchCocteil(cocteilName.value);" (click)="openNavPanel();">
+          <button [disabled]="cocteilName.invalid" (click)="searchCocteil(cocteilName.value); openNavPanel();">
             <p class="textForButton">Найти</p>
           </button>
 
@@ -24,15 +24,15 @@
             <p class="textForButton">Все коктейли</p>
       </div>
 
-      <div class="leftButton" (click)="popCocteil();" (click)="openNavPanel();" (click)="topPage();">
+      <div class="leftButton" (click)="popCocteil();" (click)="openNavPanel(); topPage();">
             <p class="textForButton">Самый лучший</p>
       </div>
 
-      <div class="leftButton" *ngIf="addCocteilBatton" routerLink="/favoriteCocteils" routerLinkActive="active">
+      <div class="leftButton" *ngIf="addCocteilBatton" (click)="openNavPanel();" routerLink="/favoriteCocteils" routerLinkActive="active">
           <p class="textForButton">Любимые</p>
       </div>
 
-      <div class="leftButton" *ngIf="addCocteilBatton" routerLink="/addCocteil" routerLinkActive="active">
+      <div class="leftButton addCocteilBatton" *ngIf="addCocteilBatton" routerLink="/addCocteil" routerLinkActive="active">
           <p class="textForButton">Добавить коктейль</p>
       </div>
 

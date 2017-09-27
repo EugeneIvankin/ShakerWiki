@@ -18,8 +18,13 @@ export class FavoriteCocteils implements OnInit{
   userCocteilsIsEmpty = false;
 
   ngOnInit(): void {
+    console.log(this.usersCocteils);
     if (this.usersCocteils.length == 0){
       this.userCocteilsIsEmpty = true;
     }
+  }
+
+  topPage(){
+    window.scrollTo(0,0);
   }
 }

@@ -1,82 +1,56 @@
-<div id="message" >
-  <p id="messageText" [hidden]="cocteilName.valid || cocteilName.untouched">Название коктейля может содержать только русские буквы и цифры</p>
-</div>
+<header>
+  <p class="messageText" [hidden]="cocteilName.valid || cocteilName.untouched">Название коктейля может содержать только русские буквы и цифры</p>
+</header>
 
-<div id="table">
+<main>
 
-  <div class="nameDiv">
-    <textarea type="text" class="addCocteilIngredient" placeholder="Название коктейля" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel"
-           required pattern="[а-яА-Я-0-9 ]{3,20}"></textarea>
-  </div>
+    <input class="inputNewCocteil" placeholder="Название коктейля" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel"
+           required pattern="[а-яА-Я-0-9 ]{3,20}"/>
 
-  <div id="infoOfCocteil">
+    <div class="newPreporation">
 
-    <div id="preporationDiv">
-
-      <div id="divOfPreporation">
-
-      <textarea class="infoCocteil" type="text" placeholder="Способ приготовления коктейля..."
+      <textarea class="preporation" placeholder="Способ приготовления коктейля..."
                 [ngModel]="cocteil.cockteils_preparation" #cocteilPreparation="ngModel"
-                required pattern='[а-яА-Яa-zA-Z.":;,!\s()]{10,500}'></textarea>
-      </div>
-
-      <div id="inputFields">
-        <div class="inputFieldIngredient">
-          <textarea class="addCocteilIngredient" type="text" placeholder="Название ингридиента"
-                 [ngModel]="cocteilIngred.ingredient" #ingredient="ngModel"
-                 required pattern="[а-яА-Яa-zA-Z ]{3,25}"></textarea>
-        </div>
-        <div class="inputFieldIngredient">
-          <textarea class="addCocteilIngredient" type="text" placeholder="Количество ингридиента"
-                    [ngModel]="cocteilIngred.volum" #volum="ngModel"
-                    required pattern="[а-я.\s0-9/-]{0,15}">></textarea>
-        </div>
-        <div id="addIngridient">
-          <button class="CocteilBatton" (click)="addCocteilIngredient(ingredient.value, volum.value)"
-            [disabled]="ingredient.invalid || volum.invalid">
-            +
-          </button>
-        </div>
-      </div>
-
-      <p class="textForCocteil">Состав коктейля: </p>
-
-      <div id="addedIngridient">
-        <tbody id="tableAddedIngridients">
-          <tr id="ingredientTr" *ngFor="let ingred of cocteilIngredient">
-            <td id="leftTd">{{ingred.name}}</td> <td id="regthTd">{{ingred.volum}}</td>
-          </tr>
-        </tbody>
-      </div>
+                required pattern='[а-яА-Яa-zA-Z.":;,!\s()]{10,500}'>
+      </textarea>
 
       <hr>
 
-      <div id="addCocteilBatton">
-        <button class="CocteilBatton" [disabled]="cocteilName.invalid || cocteilPreparation.invalid || cocteilHistory.invalid"
+      <input class="inputNewCocteil" placeholder="Название ингридиента" [ngModel]="cocteilIngred.ingredient" #ingredient="ngModel"
+             required pattern="[а-яА-Яa-zA-Z ]{3,25}"/>
+
+      <input class="inputNewCocteil" placeholder="Количество ингридиента" [ngModel]="cocteilIngred.volum" #volum="ngModel"
+             required pattern="[а-я.\s0-9/-]{0,15}"/>
+
+      <button class="CocteilBatton" (click)="addCocteilIngredient(ingredient.value, volum.value)" [disabled]="ingredient.invalid || volum.invalid">
+        +
+      </button>
+
+      <p class="textForCocteil">Состав коктейля: </p>
+
+      <tbody id="tableAddedIngridients">
+        <tr id="ingredientTr" *ngFor="let ingred of cocteilIngredient">
+          <td id="leftTd">{{ingred.name}}</td> <td id="regthTd">{{ingred.volum}}</td>
+        </tr>
+      </tbody>
+
+      <hr>
+
+      <button class="CocteilBatton" [disabled]="cocteilName.invalid || cocteilPreparation.invalid || cocteilHistory.invalid"
                 (click)="addCocteil(cocteilName.value, cocteilHistory.value, cocteilPreparation.value);">
-          <p class="textForBatton">Добавить коктейль</p>
-        </button>
-      </div>
+        <p class="textForBatton">Добавить коктейль</p>
+      </button>
 
     </div>
 
-    <div id="imageDiv">
-
-
-
-
-    </div>
-
-    <div class="infoHistoryDiv">
-      <textarea class="infoCocteil" type="text" placeholder="История коктейля..."
+    <div class="newHistory">
+      <textarea placeholder="История коктейля..."
                 [ngModel]="cocteil.history_of_cocteil" #cocteilHistory="ngModel"
-                required pattern='[а-яА-Я-0-9-.,!?%/()":;\sa-zA-Z]{3,2000}'></textarea>
+                required pattern='[а-яА-Я-0-9-.,!?%/()":;\sa-zA-Z]{3,2000}'>
+      </textarea>
     </div>
 
-  </div>
-
-</div>
-
+</main>
 
 
 
