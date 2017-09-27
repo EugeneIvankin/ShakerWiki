@@ -3,17 +3,17 @@ h1 {
   text-align: center;
 }
 
-.cocteilNotFoundBatton{
+.cocteilNotFoundButton{
   width: 20%;
   height: auto;
   margin-right: 19vw;
   float: right;
-
+  background-color: whitesmoke;
   border-radius: 5vh;
   opacity: .7;
 }
 
-.cocteilNotFoundBatton:hover{
+.cocteilNotFoundButton:hover{
   opacity: 1;
 }
 
@@ -25,7 +25,7 @@ h1 {
     color: #2d2d2d;
   }
 
-  .cocteilNotFoundBatton{
+  .cocteilNotFoundButton{
     border-radius: 0;
     opacity: 1;
     padding: 1vh;

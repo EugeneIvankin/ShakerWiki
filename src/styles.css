@@ -24,7 +24,7 @@
    user-select: none;
  }
 
- .textForBatton{
+ .textForButton{
    font-size: 2.3vh;
    font-family: "Times New Roman";
    color: #000000;
@@ -33,7 +33,7 @@
    overflow: hidden;
    text-overflow: ellipsis;
    margin: 0;
-   padding: 0.17vh 0;
+   padding: .17vh 0;
    opacity: inherit;
    cursor: pointer;
    user-select: none;

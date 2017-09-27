@@ -1,91 +1,72 @@
   <header>
-    <div class="navigationBatton" (click)="openNavPanel();">
+    <div class="navigationButton" (click)="openNavPanel();">
       <span></span>
       <span></span>
       <span></span>
     </div>
-    <h1 class="logo" (click)="homePage();">ShakerWiki</h1>
+    <h1 class="logo" (click)="homePage(); topPage();">ShakerWiki</h1>
   </header>
 
 
   <nav [ngClass]="{nav: visibility}">
       <div class="searechCocteil">
 
-        <input class="searechCocteilInput" [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel" required pattern="[а-яА-Я-0-9 -]{3,25}"
+        <input [ngModel]="cocteil.name_of_cocteil" #cocteilName="ngModel" required pattern="[а-яА-Я-0-9 -]{3,25}"
                placeholder="Название коктейля"/>
 
-          <button class="searechCocteilBatton" [disabled]="cocteilName.invalid" (click)="searchCocteil(cocteilName.value);" (click)="openNavPanel();">
-            <p class="textForBatton">Найти</p>
+          <button [disabled]="cocteilName.invalid" (click)="searchCocteil(cocteilName.value);" (click)="openNavPanel();">
+            <p class="textForButton">Найти</p>
           </button>
 
       </div>
 
-      <div class="leftBatton" routerLink="/dashboard" routerLinkActive="active" (click)="openNavPanel();">
-            <p class="textForBatton">Все коктейли</p>
+      <div class="leftButton" routerLink="/dashboard" routerLinkActive="active" (click)="openNavPanel();">
+            <p class="textForButton">Все коктейли</p>
       </div>
 
-      <div class="leftBatton" (click)="popCocteil();" (click)="openNavPanel();" (click)="topPage();">
-            <p class="textForBatton">Самый лучший</p>
+      <div class="leftButton" (click)="popCocteil();" (click)="openNavPanel();" (click)="topPage();">
+            <p class="textForButton">Самый лучший</p>
       </div>
 
-      <div class="leftBatton" *ngIf="addCocteilBatton" class="CocteilBatton" routerLink="/favoriteCocteils" routerLinkActive="active">
-          <p class="textForBatton">Любимые</p>
+      <div class="leftButton" *ngIf="addCocteilBatton" routerLink="/favoriteCocteils" routerLinkActive="active">
+          <p class="textForButton">Любимые</p>
       </div>
 
-      <div class="leftBatton" *ngIf="addCocteilBatton" routerLink="/addCocteil" routerLinkActive="active">
-          <p class="textForBatton">Добавить коктейль</p>
+      <div class="leftButton" *ngIf="addCocteilBatton" routerLink="/addCocteil" routerLinkActive="active">
+          <p class="textForButton">Добавить коктейль</p>
       </div>
 
-      <div class="rightBatton" *ngIf="addCocteilBatton" (click)="logOut();">
-          <p class="textForBatton">Выход</p>
+      <div class="rightButton" *ngIf="addCocteilBatton" (click)="logOut();">
+          <p class="textForButton">Выход</p>
       </div>
 
-      <div class="rightBatton" *ngIf="registrationBatton" (click)="showDialog = !showDialog" (click)="openNavPanel();">
-          <p class="textForBatton">Регистрация/Вход</p>
+      <div class="rightButton" *ngIf="registrationBatton" (click)="showDialog = !showDialog" (click)="openNavPanel();">
+          <p class="textForButton">Вход</p>
       </div>
   </nav>
 
   <router-outlet></router-outlet>
 
 
-<registration [(visible)]="showDialog">
-  <!--<h1>Добро пожаловать!</h1>
-  <hr>
-  <div id="inputDiv">
+  <registration class="reg" [(visible)]="showDialog">
 
-    <div id="userNameDiv">
-      <textarea class="userRegistrationInput" type="text" placeholder="Имя"
-                [ngModel]="user.name" #name="ngModel"
-                required pattern="[а-яА-Яa-zA-Z0-9]{3,10}"></textarea>
-    </div>
+    <h1>Добро пожаловать!</h1>
+    <hr>
 
-    <div id="userPasswordDiv">
-      <textarea class="userRegistrationInput" type="text" placeholder="Пароль"
-                [ngModel]="user.password" #password="ngModel"
-                required pattern="[а-яА-Яa-zA-Z0-9!-+]{3,10}"></textarea>
-    </div>
+    <input class="regInput" type="text" placeholder="Имя" [ngModel]="user.name" #name="ngModel"
+                  required pattern="[а-яА-Яa-zA-Z0-9]{3,10}"/>
+    <input class="regInput" type="text" placeholder="Пароль" [ngModel]="user.password" #password="ngModel"
+                  required pattern="[а-яА-Яa-zA-Z0-9!-+]{3,10}"/>
 
-    <div id="loginDiv">
-      <button class="userLoginBatton" [disabled]="name.invalid || password.invalid" (click)="searchUser(name.value, password.value);">
-        <p class="textForBatton">Войти</p>
-      </button>
-    </div>
+    <button class="logButton" [disabled]="name.invalid || password.invalid" (click)="searchUser(name.value, password.value);">
+      <p class="textForButton">Войти</p>
+    </button>
+    <button class="regButton" [disabled]="name.invalid || password.invalid" (click)="addUser(name.value, password.value);">
+      <p class="textForButton">Регистрация</p>
+    </button>
 
-    <div id="registrationDiv">
-      <button class="userRegistrationBatton" [disabled]="name.invalid || password.invalid" (click)="addUser(name.value, password.value);">
-        <p class="textForBatton">Регистрация</p>
-      </button>
-    </div>
+    <p class="textForButton">{{messageFromShowDialog}}</p>
+    <p class="textForButton" [hidden]="(name.valid && password.valid) || name.untouched && password.untouched">Должны быть заполнены все поля</p>
 
-    <div class="messageFromShowDialogDiv">
-      <p class="textForBatton">{{messageFromShowDialog}}</p>
-    </div>
-
-    <div class="messageFromShowDialogDiv" [hidden]="(name.valid && password.valid) || name.untouched && password.untouched">
-      <p class="textForBatton">Должны быть заполнены все поля</p>
-    </div>
-
-  </div>
--->
-</registration>
+  </registration>
 

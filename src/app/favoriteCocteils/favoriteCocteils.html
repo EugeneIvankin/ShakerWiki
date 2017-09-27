@@ -1,19 +1,19 @@
-<div id="allCocteil">
 
-  <div *ngIf="userCocteilsIsEmpty" id="message" >
-    <h1> Вам не понравился ни один коктейль</h1>
+<figure>
+
+  <h1 *ngIf="userCocteilsIsEmpty"> Вам не понравился ни один коктейль</h1>
+
+  <div class="allCocteil">
+    <figure class="smallView" *ngFor="let cocteils of usersCocteils"  [routerLink]="['/detail', cocteils?.name_of_cocteil]" (click)="topPage();">
+      <img *ngIf="cocteils?.name_of_cocteil" src="../../images/{{cocteils?.name_of_cocteil}}.png" onError="this.src='../../images/Американо.png'">
+      <figcaption>{{cocteils?.name_of_cocteil}}</figcaption>
+    </figure>
   </div>
 
-    <div *ngFor="let cocteils of usersCocteils"  [routerLink]="['/detail', cocteils]">
-      <div id="smallView">
-        <div *ngIf="cocteils" id="smallIcon">
-          <img id="image" src="../../images/{{cocteils}}.png">
-        </div>
-        <div id="smallViewName">
-          <p>{{cocteils}}</p>
-        </div>
-      </div>
+  <div class="navigationDiv">
+    <div class="button">
+      <p *ngFor="let number of numbers" (click)="getShowCocteils(number)" (click)="topPage();">{{number}}</p>
     </div>
+  </div>
 
-
-</div>
+</figure>
